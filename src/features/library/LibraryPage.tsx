@@ -16,9 +16,23 @@ export default function LibraryPage() {
   const [region, setRegion] = useState('');
   const [age, setAge] = useState('');
   const [length, setLength] = useState<LengthFilter>('');
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const recentIds = getRecentStories();
   const myProjects = loadProjects();
+
+  const LENGTH_LABELS: Record<Exclude<LengthFilter, ''>, string> = {
+    short: '짧아요 (~3분)',
+    medium: '보통 (4~5분)',
+    long: '길어요 (6분~)',
+  };
+  const activeCount = [theme, region, age, length].filter(Boolean).length;
+  function clearFilters() {
+    setTheme('');
+    setRegion('');
+    setAge('');
+    setLength('');
+  }
 
   const filtered = useMemo(() => {
     return stories.filter((s) => {
@@ -72,42 +86,97 @@ export default function LibraryPage() {
         </button>
       </div>
 
-      <div className="filter-row" role="group" aria-label="주제별 필터">
-        <span className="filter-label">주제</span>
-        {allThemes.slice(0, 10).map((t) => (
-          <button key={t} type="button" className="chip" aria-pressed={theme === t} onClick={() => setTheme(theme === t ? '' : t)}>
-            {t}
+      {/* 필터: 기본은 접힌 상태. 화면을 버튼으로 채우지 않도록 필요할 때만 펼침 */}
+      <section className="filters" aria-label="동화 거르기">
+        <div className="filters-head">
+          <button
+            type="button"
+            className="btn btn-ghost btn-sm"
+            aria-expanded={filtersOpen}
+            aria-controls="filter-panel"
+            onClick={() => setFiltersOpen((o) => !o)}
+          >
+            🔎 필터{activeCount > 0 ? ` · ${activeCount}개 선택` : ''} {filtersOpen ? '▲' : '▼'}
           </button>
-        ))}
-      </div>
-      <div className="filter-row" role="group" aria-label="지역별 필터">
-        <span className="filter-label">지역</span>
-        {allRegions.map((r) => (
-          <button key={r} type="button" className="chip" aria-pressed={region === r} onClick={() => setRegion(region === r ? '' : r)}>
-            {r}
-          </button>
-        ))}
-      </div>
-      <div className="filter-row" role="group" aria-label="추천 연령 필터">
-        <span className="filter-label">연령</span>
-        {allAges.map((a) => (
-          <button key={a} type="button" className="chip" aria-pressed={age === a} onClick={() => setAge(age === a ? '' : a)}>
-            {a}
-          </button>
-        ))}
-      </div>
-      <div className="filter-row" role="group" aria-label="이야기 길이 필터">
-        <span className="filter-label">길이</span>
-        <button type="button" className="chip" aria-pressed={length === 'short'} onClick={() => setLength(length === 'short' ? '' : 'short')}>
-          짧아요 (~3분)
-        </button>
-        <button type="button" className="chip" aria-pressed={length === 'medium'} onClick={() => setLength(length === 'medium' ? '' : 'medium')}>
-          보통 (4~5분)
-        </button>
-        <button type="button" className="chip" aria-pressed={length === 'long'} onClick={() => setLength(length === 'long' ? '' : 'long')}>
-          길어요 (6분~)
-        </button>
-      </div>
+
+          {activeCount > 0 && (
+            <div className="active-filters" aria-label="선택한 필터 (누르면 해제)">
+              {theme && (
+                <button type="button" className="chip removable" onClick={() => setTheme('')}>
+                  {theme} ✕
+                </button>
+              )}
+              {region && (
+                <button type="button" className="chip removable" onClick={() => setRegion('')}>
+                  {region} ✕
+                </button>
+              )}
+              {age && (
+                <button type="button" className="chip removable" onClick={() => setAge('')}>
+                  {age} ✕
+                </button>
+              )}
+              {length && (
+                <button type="button" className="chip removable" onClick={() => setLength('')}>
+                  {LENGTH_LABELS[length]} ✕
+                </button>
+              )}
+              <button type="button" className="btn-clear" onClick={clearFilters}>
+                모두 지우기
+              </button>
+            </div>
+          )}
+        </div>
+
+        {filtersOpen && (
+          <div className="filters-panel card" id="filter-panel">
+            <div className="filter-group" role="group" aria-label="주제별 필터">
+              <span className="filter-label">주제</span>
+              <div className="choice-row">
+                {allThemes.map((t) => (
+                  <button key={t} type="button" className="chip" aria-pressed={theme === t} onClick={() => setTheme(theme === t ? '' : t)}>
+                    {t}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="filter-group" role="group" aria-label="지역별 필터">
+              <span className="filter-label">지역</span>
+              <div className="choice-row">
+                {allRegions.map((r) => (
+                  <button key={r} type="button" className="chip" aria-pressed={region === r} onClick={() => setRegion(region === r ? '' : r)}>
+                    {r}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="filter-group" role="group" aria-label="추천 연령 필터">
+              <span className="filter-label">연령</span>
+              <div className="choice-row">
+                {allAges.map((a) => (
+                  <button key={a} type="button" className="chip" aria-pressed={age === a} onClick={() => setAge(age === a ? '' : a)}>
+                    {a}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="filter-group" role="group" aria-label="이야기 길이 필터">
+              <span className="filter-label">길이</span>
+              <div className="choice-row">
+                {(Object.keys(LENGTH_LABELS) as Exclude<LengthFilter, ''>[]).map((k) => (
+                  <button key={k} type="button" className="chip" aria-pressed={length === k} onClick={() => setLength(length === k ? '' : k)}>
+                    {LENGTH_LABELS[k]}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
+
+      <p className="result-count" role="status">
+        모두 <strong>{filtered.length}</strong>편의 동화가 있어요
+      </p>
 
       {filtered.length === 0 ? (
         <div className="card" role="status">

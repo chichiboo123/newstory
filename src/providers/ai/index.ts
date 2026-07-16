@@ -5,7 +5,14 @@ import { GeminiProvider, hasGeminiKey } from './GeminiProvider';
 export * from './types';
 export { LocalRuleProvider } from './LocalRuleProvider';
 export { MockAIProvider } from './MockAIProvider';
-export { GeminiProvider, hasGeminiKey } from './GeminiProvider';
+export {
+  GeminiProvider,
+  hasGeminiKey,
+  MODEL_CHAIN,
+  getActiveModel,
+  subscribeActiveModel,
+  formatModelName,
+} from './GeminiProvider';
 
 const local = new LocalRuleProvider();
 const gemini = hasGeminiKey() ? new GeminiProvider() : null;

@@ -5,6 +5,7 @@ import BookPreview from './BookPreview';
 import { exportProject } from '../../utils/storage';
 import { getProvider, getFallbackProvider } from '../../providers/ai';
 import { HERO_JOURNEY_STEPS } from '../../data/rewrite-options';
+import AiModelIndicator from '../../components/AiModelIndicator';
 
 interface Props {
   project: RewriteProject;
@@ -99,9 +100,12 @@ export default function FinishStep({ project, story, onProjectChange }: Props) {
       <div className="card no-print">
         <h3>🔍 이야기 점검하기</h3>
         <p className="hint">등장인물과 흐름이 잘 이어지는지 가볍게 살펴봐 드려요. 고칠지 말지는 작가인 여러분이 정해요!</p>
-        <button type="button" className="btn btn-secondary btn-sm" onClick={runReview} disabled={reviewing} aria-busy={reviewing}>
-          {reviewing ? '살펴보는 중…' : '이야기 점검하기'}
-        </button>
+        <div className="helper-bar">
+          <button type="button" className="btn btn-secondary btn-sm" onClick={runReview} disabled={reviewing} aria-busy={reviewing}>
+            {reviewing ? '살펴보는 중…' : '이야기 점검하기'}
+          </button>
+          <AiModelIndicator />
+        </div>
         {review && (
           <ul style={{ marginTop: '0.6rem' }}>
             {review.map((r, i) => (

@@ -25,11 +25,63 @@ import type {
  */
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
-const MODEL = (import.meta.env.VITE_GEMINI_MODEL as string | undefined) ?? 'gemini-2.5-flash';
+
+/**
+ * 모델 폴백 체인: 앞에서부터 호출하고, 실패하면(모델 없음/한도/오류) 다음 모델로 넘어갑니다.
+ * 마지막 두 모델(2.5 계열)은 안정적으로 제공되므로 항상 대체 경로가 됩니다.
+ * VITE_GEMINI_MODELS(쉼표 구분) 또는 VITE_GEMINI_MODEL로 덮어쓸 수 있습니다.
+ */
+const DEFAULT_CHAIN = [
+  'gemini-3.1-flash-lite',
+  'gemini-3.5-flash',
+  'gemini-3-flash',
+  'gemini-2.5-flash',
+  'gemini-2.5-flash-lite',
+];
+
+function resolveChain(): string[] {
+  const list = (import.meta.env.VITE_GEMINI_MODELS as string | undefined)
+    ?.split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (list && list.length) return list;
+  const single = (import.meta.env.VITE_GEMINI_MODEL as string | undefined)?.trim();
+  return single ? [single] : DEFAULT_CHAIN;
+}
+
+export const MODEL_CHAIN: string[] = resolveChain();
 
 /** 키가 빌드에 주입되었는지 여부 */
 export function hasGeminiKey(): boolean {
   return typeof API_KEY === 'string' && API_KEY.trim().length > 0;
+}
+
+/** 사람이 읽기 좋은 모델 이름 (예: gemini-3.1-flash-lite → Gemini 3.1 Flash Lite) */
+export function formatModelName(id: string): string {
+  return id
+    .split('-')
+    .map((p) => (p === 'gemini' ? 'Gemini' : /^\d/.test(p) ? p : p.charAt(0).toUpperCase() + p.slice(1)))
+    .join(' ');
+}
+
+// ── 현재 사용 중인 모델 추적 (배터리 표시등용) ─────────────────
+let activeModel: string | null = null;
+const modelListeners = new Set<() => void>();
+
+/** 마지막으로 성공한(=현재 대화 중인) 모델 id. 아직 호출 전이면 null */
+export function getActiveModel(): string | null {
+  return activeModel;
+}
+
+export function subscribeActiveModel(cb: () => void): () => void {
+  modelListeners.add(cb);
+  return () => modelListeners.delete(cb);
+}
+
+function setActiveModel(id: string) {
+  if (activeModel === id) return;
+  activeModel = id;
+  modelListeners.forEach((l) => l());
 }
 
 /** 어린이 창작 조력자로서 지켜야 할 시스템 지침 (기획서 5장 원칙 반영) */
@@ -60,10 +112,9 @@ function cacheKey(method: string, input: unknown): string {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-/** Gemini generateContent 호출 → 구조화 JSON 파싱 (백오프 재시도 포함) */
-async function callGemini<T>(userPrompt: string, schema: GeminiSchema): Promise<T> {
-  if (!hasGeminiKey()) throw new Error('Gemini API 키가 없습니다.');
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
+/** 단일 모델로 1회 호출 (429/503은 1회 백오프 재시도) */
+async function callOnce<T>(model: string, userPrompt: string, schema: GeminiSchema): Promise<T> {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
   const body = {
     systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
     contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
@@ -75,32 +126,42 @@ async function callGemini<T>(userPrompt: string, schema: GeminiSchema): Promise<
       responseSchema: schema,
     },
   };
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    if ((res.status === 429 || res.status === 503) && attempt === 0) {
+      await sleep(500);
+      continue; // 일시적 혼잡: 같은 모델 1회 재시도
+    }
+    if (!res.ok) throw new Error(`${model} 오류: ${res.status}`);
+    const data = await res.json();
+    const text: string | undefined = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!text) throw new Error(`${model} 응답이 비어 있음`);
+    return JSON.parse(text) as T;
+  }
+  throw new Error(`${model} 재시도 실패`);
+}
 
+/**
+ * 모델 체인을 앞에서부터 시도하고, 실패하면 다음 모델로 넘어갑니다.
+ * 성공한 모델을 현재 사용 모델로 기록합니다(배터리 표시등).
+ */
+async function callGemini<T>(userPrompt: string, schema: GeminiSchema): Promise<T> {
+  if (!hasGeminiKey()) throw new Error('Gemini API 키가 없습니다.');
   let lastErr: unknown;
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (const model of MODEL_CHAIN) {
     try {
-      const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-      // 일시적 오류(429/5xx)는 백오프 후 재시도
-      if (res.status === 429 || res.status >= 500) {
-        lastErr = new Error(`Gemini 일시 오류: ${res.status}`);
-        await sleep(500 * (attempt + 1));
-        continue;
-      }
-      if (!res.ok) throw new Error(`Gemini 오류: ${res.status}`);
-      const data = await res.json();
-      const text: string | undefined = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!text) throw new Error('Gemini 응답이 비어 있습니다.');
-      return JSON.parse(text) as T;
+      const out = await callOnce<T>(model, userPrompt, schema);
+      setActiveModel(model); // 이 모델로 대화 중
+      return out;
     } catch (e) {
-      lastErr = e;
-      if (attempt < 2) await sleep(400 * (attempt + 1));
+      lastErr = e; // 다음 모델로 폴백
     }
   }
-  throw lastErr ?? new Error('Gemini 호출 실패');
+  throw lastErr ?? new Error('모든 Gemini 모델 호출 실패');
 }
 
 /** 캐시 + 중복요청 잠금으로 감싼 호출 */
@@ -119,7 +180,7 @@ async function cached<T>(method: string, input: unknown, run: () => Promise<T>):
 }
 
 export class GeminiProvider implements AIProvider {
-  readonly name = `Gemini 창작 도우미 (${MODEL})`;
+  readonly name = 'Gemini 창작 도우미';
   readonly requiresEndpoint = false;
 
   generateIdeas(input: IdeaRequest): Promise<IdeaResponse> {

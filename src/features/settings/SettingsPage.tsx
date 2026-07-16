@@ -39,8 +39,8 @@ export default function SettingsPage() {
           <li>Google AI Studio에서 Gemini API 키를 발급받아요.</li>
           <li>
             저장소 <strong>Settings → Secrets and variables → Actions</strong>에서{' '}
-            <code>GEMINI_API_KEY</code> 시크릿을 추가해요. (모델을 바꾸려면{' '}
-            <code>VITE_GEMINI_MODEL</code> 변수도 추가)
+            <code>GEMINI_API_KEY</code> 시크릿을 추가해요. (모델 순서를 바꾸려면{' '}
+            <code>VITE_GEMINI_MODELS</code> 변수도 추가 — 쉼표로 구분)
           </li>
           <li>
             <strong>main</strong> 브랜치에 커밋을 올리면(또는 Actions에서 재실행) 다음 배포부터 AI가

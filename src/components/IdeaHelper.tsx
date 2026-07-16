@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { getProvider, getFallbackProvider } from '../providers/ai';
 import type { IdeaResponse } from '../providers/ai';
+import AiModelIndicator from './AiModelIndicator';
 
 interface Props {
   topic: string;
@@ -39,9 +40,12 @@ export default function IdeaHelper({ topic, context, onPick, label }: Props) {
 
   return (
     <div>
-      <button type="button" className="btn btn-secondary btn-sm" onClick={fetchIdeas} disabled={loading} aria-busy={loading}>
-        {loading ? '아이디어를 찾는 중…' : (label ?? '💡 아이디어 도움받기')}
-      </button>
+      <div className="helper-bar">
+        <button type="button" className="btn btn-secondary btn-sm" onClick={fetchIdeas} disabled={loading} aria-busy={loading}>
+          {loading ? '아이디어를 찾는 중…' : (label ?? '💡 아이디어 도움받기')}
+        </button>
+        <AiModelIndicator />
+      </div>
       {ideas && (
         <div className="idea-cards" role="list" aria-label="추천 아이디어">
           {ideas.map((idea, i) => (

@@ -475,6 +475,68 @@ button {
   color: var(--color-accent-strong);
 }
 
+/* ── 접이식 필터 (버튼 벽 방지) ─────────────── */
+.filters {
+  margin-bottom: var(--space-3);
+}
+
+.filters-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.active-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.chip.removable {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+}
+
+.btn-clear {
+  background: none;
+  border: none;
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-weight: 700;
+  font-size: var(--fs-small);
+  cursor: pointer;
+  min-height: 40px;
+  padding: 0 0.3rem;
+}
+
+.filters-panel {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.filter-group .filter-label {
+  padding-top: 0.5rem;
+}
+
+.result-count {
+  color: var(--color-text-sub);
+  font-size: var(--fs-small);
+  margin: 0 0 0.75rem;
+}
+
 .story-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -738,6 +800,77 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+}
+
+/* AI 도우미 버튼 + 모델 표시등 한 줄 배치 */
+.helper-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* 어떤 Gemini 모델로 대화 중인지 알려 주는 배터리 표시등 */
+.ai-battery {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--fs-detail);
+  font-weight: 700;
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.ai-battery-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 3px;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+}
+
+.ai-battery-icon::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 0 1px 1px 0;
+}
+
+.ai-battery-cell {
+  width: 3px;
+  height: 9px;
+  border-radius: 1px;
+  background: currentColor;
+  opacity: 0.22;
+}
+
+.ai-battery-cell.on {
+  opacity: 1;
+}
+
+.ai-battery-high {
+  color: var(--color-secondary-strong);
+}
+
+.ai-battery-mid {
+  color: #8a5a00;
+}
+
+.ai-battery-low {
+  color: var(--color-danger);
+}
+
+.ai-battery-label {
+  color: var(--color-text);
 }
 
 .idea-cards {

@@ -4,6 +4,7 @@ import type { RewrittenScene } from '../../types/project';
 import { STAGE_LABELS, getStageByOrder } from '../../types/story';
 import { STORY_GRAMMAR_PROMPTS, SENTENCE_STARTERS } from '../../data/rewrite-options';
 import { getProvider, getFallbackProvider } from '../../providers/ai';
+import AiModelIndicator from '../../components/AiModelIndicator';
 
 interface Props {
   story: Story;
@@ -154,9 +155,12 @@ export default function SceneRewriteEditor({ story, rewritten, onChange }: Props
             </ul>
           </details>
           <div style={{ marginTop: '0.6rem' }}>
-            <button type="button" className="btn btn-secondary btn-sm" onClick={suggestConnectors} disabled={loadingConn} aria-busy={loadingConn}>
-              {loadingConn ? '찾는 중…' : '🔗 앞뒤 장면 연결 문장 추천'}
-            </button>
+            <div className="helper-bar">
+              <button type="button" className="btn btn-secondary btn-sm" onClick={suggestConnectors} disabled={loadingConn} aria-busy={loadingConn}>
+                {loadingConn ? '찾는 중…' : '🔗 앞뒤 장면 연결 문장 추천'}
+              </button>
+              <AiModelIndicator />
+            </div>
             {connectors && (
               <div className="choice-row" style={{ marginTop: '0.5rem' }}>
                 {connectors.map((c) => (

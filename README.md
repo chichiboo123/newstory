@@ -83,9 +83,19 @@ AI 도우미는 **Google Gemini**로 동작하며, 키는 **사이트에 입력�
 1. [Google AI Studio](https://aistudio.google.com/)에서 **전용** Gemini API 키를 발급합니다.
 2. 저장소 **Settings → Secrets and variables → Actions**에서:
    - **Secret** `GEMINI_API_KEY` 추가 (필수)
-   - **Variable** `VITE_GEMINI_MODEL` 추가 (선택, 기본값 `gemini-2.5-flash`)
+   - **Variable** `VITE_GEMINI_MODELS` 추가 (선택, 모델 폴백 체인. 쉼표 구분)
 3. `main`에 커밋하거나 Actions에서 워크플로를 재실행하면 다음 배포부터 AI가 켜집니다.
 4. 키가 없으면 앱은 자동으로 **규칙 기반 도우미**로 동작합니다(핵심 기능 모두 정상).
+
+### 모델 폴백 체인 & 사용 모델 표시등
+
+AI는 여러 모델을 **앞에서부터 시도하고 실패하면 다음 모델로 넘어갑니다.** 기본 체인:
+
+```
+gemini-3.1-flash-lite → gemini-3.5-flash → gemini-3-flash → gemini-2.5-flash → gemini-2.5-flash-lite
+```
+
+`VITE_GEMINI_MODELS`(Variable, 쉼표 구분)로 순서를 바꿀 수 있습니다. 지금 어떤 모델로 대화 중인지는 도우미 옆의 **배터리 표시등**으로 확인할 수 있어요(맨 앞 모델일수록 배터리가 가득 차고, 뒤로 갈수록 칸이 줄어듭니다).
 
 ### ⚠️ 보안: 정적 배포에서 키가 노출될 수 있는 이유와 대응
 

@@ -62,6 +62,8 @@ jobs:
         env:
           VITE_BASE: ${{ steps.pages.outputs.base_path }}
           VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # 모델 폴백 체인(쉼표 구분). 미설정 시 앱 기본 체인 사용.
+          VITE_GEMINI_MODELS: ${{ vars.VITE_GEMINI_MODELS }}
           VITE_GEMINI_MODEL: ${{ vars.VITE_GEMINI_MODEL }}
 
       - name: Upload Pages artifact
