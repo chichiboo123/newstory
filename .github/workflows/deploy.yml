@@ -1,7 +1,9 @@
 # GitHub Pages 자동 배포 워크플로
 #
-# 기본 브랜치(현재는 claude/story-creation-framework-3fmt0l, 병합 후 main)에 푸시하면
-# 빌드 후 GitHub Pages에 자동 배포합니다.
+# 기본 브랜치 main에 푸시하면 빌드 후 GitHub Pages에 자동 배포합니다.
+# GitHub Pages 환경(github-pages)은 기본 브랜치에서만 배포를 허용하므로,
+# 트리거를 main으로 제한하고 deploy 잡에도 main 조건을 두어
+# 다른 브랜치 푸시가 배포 단계에서 거부되는 일이 없도록 합니다.
 #
 # 이 워크플로는 configure-pages 단계에서 GitHub Pages를 자동으로 활성화하므로,
 # 저장소 Settings에서 Pages Source를 수동으로 바꾸지 않아도 됩니다.
@@ -13,7 +15,6 @@ on:
   push:
     branches:
       - main
-      - claude/story-creation-framework-3fmt0l
   workflow_dispatch:
 
 permissions:
@@ -67,6 +68,8 @@ jobs:
 
   deploy:
     needs: build
+    # 기본 브랜치에서만 배포 (수동 실행을 다른 브랜치에서 하더라도 배포는 건너뜀)
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
