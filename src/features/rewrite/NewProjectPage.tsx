@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getStoryById } from '../../data/stories';
 import StepBar from '../../components/StepBar';
 import { createProject, upsertProject } from '../../utils/storage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import type { RewriteMode } from '../../types/project';
 
 /** 다시 쓰기 방식 선택 + 별명/제목 입력 후 프로젝트 생성 */
@@ -12,6 +13,7 @@ export default function NewProjectPage() {
   const story = getStoryById(storyId ?? '');
   const [mode, setMode] = useState<RewriteMode>('plot');
   const [nickname, setNickname] = useState('');
+  useDocumentTitle(story ? `${story.titleKo} 다시 쓰기` : '다시 쓰기');
 
   if (!story) {
     return (

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export default function NotFoundPage() {
+  useDocumentTitle('길을 잃었어요');
   return (
     <div className="card" style={{ textAlign: 'center', padding: '3rem 1rem' }}>
       <p style={{ fontSize: '3rem', margin: 0 }} aria-hidden="true">

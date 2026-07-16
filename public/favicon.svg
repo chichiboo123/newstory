@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="안녕, 동화">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb877" />
+      <stop offset="1" stop-color="#e8752a" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <path
+    d="M32 20 C26 16 18 16 12 18 L12 45 C18 43 26 43 32 47 C38 43 46 43 52 45 L52 18 C46 16 38 16 32 20 Z"
+    fill="#fff8ef"
+  />
+  <path d="M32 20 L32 47" stroke="#e8a06a" stroke-width="2" fill="none" />
+  <path d="M17 25 C21 24 26 24 29 26" stroke="#f0c39a" stroke-width="1.6" fill="none" stroke-linecap="round" />
+  <path d="M17 31 C21 30 26 30 29 32" stroke="#f0c39a" stroke-width="1.6" fill="none" stroke-linecap="round" />
+  <path d="M35 26 C38 24 43 24 47 25" stroke="#f0c39a" stroke-width="1.6" fill="none" stroke-linecap="round" />
+  <path d="M35 32 C38 30 43 30 47 31" stroke="#f0c39a" stroke-width="1.6" fill="none" stroke-linecap="round" />
+  <path d="M48 9 L49.7 14.3 L55 16 L49.7 17.7 L48 23 L46.3 17.7 L41 16 L46.3 14.3 Z" fill="#fff3d6" />
+</svg>

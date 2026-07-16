@@ -4,10 +4,12 @@ import { stories, allThemes, allRegions, allAges } from '../../data/stories';
 import StoryCard from '../../components/StoryCard';
 import { getRecentStories } from '../../utils/storage';
 import { loadProjects } from '../../utils/storage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 type LengthFilter = '' | 'short' | 'medium' | 'long';
 
 export default function LibraryPage() {
+  useDocumentTitle('동화 도서관');
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [theme, setTheme] = useState('');
@@ -47,6 +49,13 @@ export default function LibraryPage() {
       <section className="library-hero">
         <h1>🏰 동화 마법 도서관</h1>
         <p>오늘은 어떤 이야기를 새롭게 써 볼까요?</p>
+        <ol className="how-it-works" aria-label="이렇게 놀아요">
+          <li><span aria-hidden="true">1</span> 동화 고르기</li>
+          <li><span aria-hidden="true">2</span> 살펴보기</li>
+          <li><span aria-hidden="true">3</span> 바꿀 부분 고르기</li>
+          <li><span aria-hidden="true">4</span> 다시 쓰기</li>
+          <li><span aria-hidden="true">5</span> 완성하기</li>
+        </ol>
       </section>
 
       <div className="library-toolbar">

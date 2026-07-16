@@ -4,23 +4,31 @@
    폰트: Pretendard GOV (index.html에서 로드)
    ───────────────────────────────────────────── */
 
+/*
+  색상은 KRDS(디지털 정부 서비스 UI/UX 가이드라인) 및 한국형 웹 접근성 지침(KWCAG)의
+  명도 대비 기준을 따릅니다: 본문 텍스트 4.5:1 이상, 큰 텍스트·UI 요소 3:1 이상.
+  어린이 서비스 특성에 맞는 따뜻한 색을 유지하되 대비 기준을 충족하도록 조정했습니다.
+*/
 :root {
   /* 색상 토큰 */
   --color-bg: #fdf8f0;
   --color-surface: #ffffff;
   --color-surface-warm: #fff6e9;
   --color-primary: #e8752a;
-  --color-primary-dark: #c95d18;
+  --color-primary-dark: #b8500f; /* 흰 배경 대비 5:1 — 제목·링크에 사용 */
   --color-primary-soft: #ffe3cc;
-  --color-secondary: #4a7c59;
+  --color-secondary: #3f6e4d; /* 대비 강화 */
+  --color-secondary-strong: #2f5a3c; /* 옅은 배경 위 작은 글자용 */
   --color-secondary-soft: #ddefe2;
-  --color-accent: #7d5ba6;
+  --color-accent: #6b46a0;
+  --color-accent-strong: #573484; /* 옅은 배경 위 작은 글자용 */
   --color-accent-soft: #ece3f6;
-  --color-text: #3d3229;
-  --color-text-sub: #6f6257;
-  --color-border: #e8ddd0;
-  --color-danger: #c0392b;
-  --color-focus: #1a73e8;
+  --color-text: #35291f;
+  --color-text-sub: #574b40; /* 대비 강화 (5.4:1) */
+  --color-border: #e2d6c7;
+  --color-danger: #b3271b;
+  --color-link: #b8500f;
+  --color-focus: #1a56db; /* KRDS 포커스: 명확한 파란 링 */
 
   /* 타이포그래피 */
   --font-family: 'Pretendard GOV Variable', 'Pretendard GOV', 'Pretendard Variable', Pretendard,
@@ -71,7 +79,8 @@ p {
 }
 
 a {
-  color: var(--color-primary-dark);
+  color: var(--color-link);
+  text-underline-offset: 0.2em;
 }
 
 button {
@@ -99,6 +108,26 @@ button {
   border: 0;
 }
 
+/* KRDS/KWCAG: 본문 바로가기 스킵 링크 (포커스 시에만 화면에 나타남) */
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: -60px;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: var(--color-primary-dark);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 var(--radius-btn) var(--radius-btn);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ── 레이아웃 ───────────────────────────── */
 
 .app-header {
@@ -120,13 +149,34 @@ button {
 }
 
 .app-logo {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-primary-dark);
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
+}
+
+.app-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: linear-gradient(135deg, #ffb877, #e8752a);
+  box-shadow: 0 2px 6px rgba(184, 80, 15, 0.3);
+}
+
+.app-logo-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.app-logo-text b {
+  font-weight: 800;
+  color: var(--color-primary-dark);
 }
 
 .app-nav {
@@ -308,6 +358,42 @@ button {
   color: var(--color-text-sub);
 }
 
+.how-it-works {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.how-it-works li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-sub);
+}
+
+.how-it-works li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
 .library-toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -356,7 +442,7 @@ button {
 .chip[aria-pressed='true'] {
   border-color: var(--color-accent);
   background: var(--color-accent-soft);
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
 }
 
 .story-grid {
@@ -421,14 +507,14 @@ button {
   font-size: 0.8rem;
   font-weight: 700;
   background: var(--color-secondary-soft);
-  color: var(--color-secondary);
+  color: var(--color-secondary-strong);
   border-radius: 999px;
-  padding: 0.1rem 0.6rem;
+  padding: 0.15rem 0.6rem;
 }
 
 .tag.tag-age {
   background: var(--color-accent-soft);
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
 }
 
 /* ── 동화 상세 ─────────────────────────── */
@@ -507,9 +593,9 @@ button {
 .role-badge {
   font-size: 0.8rem;
   background: var(--color-accent-soft);
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   border-radius: 999px;
-  padding: 0.1rem 0.6rem;
+  padding: 0.15rem 0.6rem;
   font-weight: 700;
 }
 

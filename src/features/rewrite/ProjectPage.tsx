@@ -9,6 +9,7 @@ import CharacterChangesEditor from './CharacterChangesEditor';
 import PlotDraftEditor from './PlotDraftEditor';
 import SceneRewriteEditor from './SceneRewriteEditor';
 import FinishStep from '../story-preview/FinishStep';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 type SubTab = 'elements' | 'characters';
 
@@ -35,6 +36,9 @@ export default function ProjectPage() {
   }, []);
 
   const story = project ? getStoryById(project.sourceStoryId) : undefined;
+  useDocumentTitle(
+    project && story ? `${project.projectTitle || `새로 쓴 ${story.titleKo}`} 쓰는 중` : '다시 쓰기',
+  );
 
   if (!project || !story) {
     return (

@@ -2,9 +2,11 @@ import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { loadProjects, deleteProject, importProject, exportProject } from '../../utils/storage';
 import { getStoryById } from '../../data/stories';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 /** 내가 다시 쓴 동화 목록 + JSON 불러오기 */
 export default function MyStoriesPage() {
+  useDocumentTitle('내가 쓴 이야기');
   const [projects, setProjects] = useState(loadProjects());
   const [message, setMessage] = useState('');
   const [confirmingId, setConfirmingId] = useState<string | null>(null);

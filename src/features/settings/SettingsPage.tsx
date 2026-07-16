@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { getSavedEndpoint, saveEndpoint, getProvider } from '../../providers/ai';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 /** 설정: AI 도우미 상태 표시 및 (교사용) 프록시 엔드포인트 등록 */
 export default function SettingsPage() {
+  useDocumentTitle('설정');
   const [endpoint, setEndpoint] = useState(getSavedEndpoint());
   const [saved, setSaved] = useState(false);
   const provider = getProvider();

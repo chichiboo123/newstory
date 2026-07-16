@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from '../components/ScrollToTop';
 import Layout from '../components/Layout';
 import LibraryPage from '../features/library/LibraryPage';
 import StoryPage from '../features/story-reader/StoryPage';
@@ -16,6 +17,7 @@ import NotFoundPage from '../features/NotFoundPage';
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<LibraryPage />} />

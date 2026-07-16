@@ -6,6 +6,7 @@ import StepBar from '../../components/StepBar';
 import CharacterCard from '../../components/CharacterCard';
 import { CoverArt } from '../../components/StoryCard';
 import { addRecentStory } from '../../utils/storage';
+import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 
 type Tab = 'intro' | 'characters' | 'scenes' | 'source';
 
@@ -13,6 +14,7 @@ export default function StoryPage() {
   const { storyId } = useParams();
   const story = getStoryById(storyId ?? '');
   const [tab, setTab] = useState<Tab>('intro');
+  useDocumentTitle(story ? story.titleKo : '동화를 찾을 수 없어요');
 
   useEffect(() => {
     if (story) addRecentStory(story.id);
