@@ -76,8 +76,7 @@
         "emotions": ["서러움", "꿋꿋함"],
         "conflict": "형이 재산을 독차지하고 동생을 내쫓았어요.",
         "nextConnection": "봄이 오고 흥부네 처마에 제비가 둥지를 틀어요.",
-        "editableElements": ["형제의 성격", "시대", "장소"],
-        "stage": "exposition"
+        "editableElements": ["형제의 성격", "시대", "장소"]
       },
       {
         "id": "s2",
@@ -89,8 +88,7 @@
         "emotions": ["안타까움", "정성"],
         "conflict": "작은 생명이 다쳤어요.",
         "nextConnection": "이듬해 봄, 제비가 무언가를 물고 돌아와요.",
-        "editableElements": ["돕는 동물", "치료 방법", "계절"],
-        "stage": "rising"
+        "editableElements": ["돕는 동물", "치료 방법", "계절"]
       },
       {
         "id": "s3",
@@ -102,8 +100,7 @@
         "emotions": ["놀라움", "기쁨"],
         "conflict": "믿기 힘든 일이 벌어졌어요.",
         "nextConnection": "흥부네 소식이 놀부의 귀에 들어가요.",
-        "editableElements": ["신기한 씨앗", "박에서 나오는 것", "가족의 반응"],
-        "stage": "climax"
+        "editableElements": ["신기한 씨앗", "박에서 나오는 것", "가족의 반응"]
       },
       {
         "id": "s4",
@@ -115,8 +112,7 @@
         "emotions": ["욕심", "후회"],
         "conflict": "억지로 만든 선행은 진짜 선행이 아니에요.",
         "nextConnection": "빈털터리가 된 놀부가 흥부를 찾아가요.",
-        "editableElements": ["놀부의 꾀", "박에서 나오는 것", "도깨비의 요구"],
-        "stage": "falling"
+        "editableElements": ["놀부의 꾀", "박에서 나오는 것", "도깨비의 요구"]
       },
       {
         "id": "s5",
@@ -128,8 +124,7 @@
         "emotions": ["뉘우침", "따뜻함"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "형제의 대화", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "형제의 대화", "그 후 이야기"]
       }
     ],
     "sourceInfo": {
@@ -218,8 +213,7 @@
         "emotions": ["고단함", "꿋꿋함"],
         "conflict": "새어머니가 콩쥐에게만 궂은일을 시켜요.",
         "nextConnection": "고을 잔치 소식이 마을에 퍼져요.",
-        "editableElements": ["주인공의 처지", "가족 구성", "시대"],
-        "stage": "exposition"
+        "editableElements": ["주인공의 처지", "가족 구성", "시대"]
       },
       {
         "id": "s2",
@@ -231,8 +225,7 @@
         "emotions": ["막막함", "슬픔"],
         "conflict": "혼자서는 할 수 없는 일이 산더미예요.",
         "nextConnection": "마당에 뜻밖의 손님들이 찾아와요.",
-        "editableElements": ["불가능한 숙제", "숙제를 내는 인물", "대사"],
-        "stage": "rising"
+        "editableElements": ["불가능한 숙제", "숙제를 내는 인물", "대사"]
       },
       {
         "id": "s3",
@@ -244,8 +237,7 @@
         "emotions": ["놀라움", "고마움"],
         "conflict": "잔치가 끝나기 전에 일을 마쳐야 해요.",
         "nextConnection": "일을 마친 콩쥐가 잔치로 향해요.",
-        "editableElements": ["도와주는 동물", "돕는 방법", "신기한 사건"],
-        "stage": "climax"
+        "editableElements": ["도와주는 동물", "돕는 방법", "신기한 사건"]
       },
       {
         "id": "s4",
@@ -257,8 +249,7 @@
         "emotions": ["다급함", "아쉬움"],
         "conflict": "아끼는 꽃신을 잃어버렸어요.",
         "nextConnection": "원님이 꽃신의 주인을 찾겠다고 알려요.",
-        "editableElements": ["잃어버린 물건", "장소", "사건"],
-        "stage": "falling"
+        "editableElements": ["잃어버린 물건", "장소", "사건"]
       },
       {
         "id": "s5",
@@ -270,8 +261,7 @@
         "emotions": ["기쁨", "용서"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "증표의 물건", "용서의 방법"],
-        "stage": "resolution"
+        "editableElements": ["결말", "증표의 물건", "용서의 방법"]
       }
     ],
     "sourceInfo": {
@@ -360,8 +350,7 @@
         "emotions": ["무서움", "긴장"],
         "conflict": "호랑이가 어머니 행세를 하려 해요.",
         "nextConnection": "호랑이가 오누이가 기다리는 오두막으로 향해요.",
-        "editableElements": ["위협하는 존재", "빼앗기는 것", "장소"],
-        "stage": "exposition"
+        "editableElements": ["위협하는 존재", "빼앗기는 것", "장소"]
       },
       {
         "id": "s2",
@@ -373,8 +362,7 @@
         "emotions": ["의심", "공포"],
         "conflict": "문밖의 목소리가 어머니가 아니에요.",
         "nextConnection": "호랑이가 우물에 비친 오누이를 발견해요.",
-        "editableElements": ["확인하는 방법", "이상한 점", "도망가는 곳"],
-        "stage": "rising"
+        "editableElements": ["확인하는 방법", "이상한 점", "도망가는 곳"]
       },
       {
         "id": "s3",
@@ -386,8 +374,7 @@
         "emotions": ["아찔함", "절박함"],
         "conflict": "호랑이가 나무 위까지 쫓아와요.",
         "nextConnection": "오누이가 하늘을 향해 간절히 빌어요.",
-        "editableElements": ["실수의 내용", "쫓아오는 방법", "긴장의 순간"],
-        "stage": "climax"
+        "editableElements": ["실수의 내용", "쫓아오는 방법", "긴장의 순간"]
       },
       {
         "id": "s4",
@@ -399,8 +386,7 @@
         "emotions": ["간절함", "안도"],
         "conflict": "하늘의 도움만이 마지막 희망이에요.",
         "nextConnection": "썩은 줄이 뚝 끊어지고, 오누이는 하늘에 닿아요.",
-        "editableElements": ["기도의 내용", "내려오는 것", "호랑이의 최후"],
-        "stage": "falling"
+        "editableElements": ["기도의 내용", "내려오는 것", "호랑이의 최후"]
       },
       {
         "id": "s5",
@@ -412,8 +398,7 @@
         "emotions": ["평화", "신비로움"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["맡게 되는 역할", "결말", "하늘에서의 생활"],
-        "stage": "resolution"
+        "editableElements": ["맡게 되는 역할", "결말", "하늘에서의 생활"]
       }
     ],
     "sourceInfo": {
@@ -502,8 +487,7 @@
         "emotions": ["속상함", "막막함"],
         "conflict": "먹고살 도구인 도끼를 잃어버렸어요.",
         "nextConnection": "연못 물이 갈라지며 신령이 나타나요.",
-        "editableElements": ["잃어버린 물건", "장소", "주인공의 직업"],
-        "stage": "exposition"
+        "editableElements": ["잃어버린 물건", "장소", "주인공의 직업"]
       },
       {
         "id": "s2",
@@ -515,8 +499,7 @@
         "emotions": ["놀라움", "긴장"],
         "conflict": "금도끼의 유혹을 이겨 내야 해요.",
         "nextConnection": "산신령의 얼굴에 미소가 번져요.",
-        "editableElements": ["시험의 내용", "신령의 질문", "대사"],
-        "stage": "rising"
+        "editableElements": ["시험의 내용", "신령의 질문", "대사"]
       },
       {
         "id": "s3",
@@ -528,8 +511,7 @@
         "emotions": ["기쁨", "감사"],
         "conflict": "",
         "nextConnection": "이 소문이 마을에 퍼져 욕심쟁이의 귀에 들어가요.",
-        "editableElements": ["상의 내용", "감사의 표현", "소문이 퍼지는 과정"],
-        "stage": "climax"
+        "editableElements": ["상의 내용", "감사의 표현", "소문이 퍼지는 과정"]
       },
       {
         "id": "s4",
@@ -541,8 +523,7 @@
         "emotions": ["능청", "조마조마"],
         "conflict": "거짓말은 신령을 속일 수 없어요.",
         "nextConnection": "산신령이 사라지고 연못이 잠잠해져요.",
-        "editableElements": ["흉내 내는 방법", "거짓말의 내용", "신령의 반응"],
-        "stage": "falling"
+        "editableElements": ["흉내 내는 방법", "거짓말의 내용", "신령의 반응"]
       },
       {
         "id": "s5",
@@ -554,8 +535,7 @@
         "emotions": ["뉘우침", "훈훈함"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "욕심쟁이의 변화", "마을에 전해진 말"],
-        "stage": "resolution"
+        "editableElements": ["결말", "욕심쟁이의 변화", "마을에 전해진 말"]
       }
     ],
     "sourceInfo": {
@@ -644,8 +624,7 @@
         "emotions": ["걱정", "결의"],
         "conflict": "약을 구하려면 토끼를 속여야 해요.",
         "nextConnection": "자라가 토끼 그림을 품고 육지로 떠나요.",
-        "editableElements": ["병의 원인", "약의 내용", "나서는 인물"],
-        "stage": "exposition"
+        "editableElements": ["병의 원인", "약의 내용", "나서는 인물"]
       },
       {
         "id": "s2",
@@ -657,8 +636,7 @@
         "emotions": ["설렘", "우쭐함"],
         "conflict": "달콤한 말 뒤에 위험이 숨어 있어요.",
         "nextConnection": "토끼가 바닷속 용궁에 도착해요.",
-        "editableElements": ["꾀는 방법", "토끼의 마음", "대사"],
-        "stage": "rising"
+        "editableElements": ["꾀는 방법", "토끼의 마음", "대사"]
       },
       {
         "id": "s3",
@@ -670,8 +648,7 @@
         "emotions": ["충격", "침착함"],
         "conflict": "토끼의 목숨이 위태로워요.",
         "nextConnection": "토끼가 뜻밖의 이야기를 꺼내요.",
-        "editableElements": ["위기의 내용", "토끼의 속마음", "분위기"],
-        "stage": "climax"
+        "editableElements": ["위기의 내용", "토끼의 속마음", "분위기"]
       },
       {
         "id": "s4",
@@ -683,8 +660,7 @@
         "emotions": ["능청", "조마조마"],
         "conflict": "꾀가 통할지 아슬아슬해요.",
         "nextConnection": "자라가 토끼를 태우고 육지로 돌아가요.",
-        "editableElements": ["꾀의 내용", "용왕의 반응", "대사"],
-        "stage": "falling"
+        "editableElements": ["꾀의 내용", "용왕의 반응", "대사"]
       },
       {
         "id": "s5",
@@ -696,8 +672,7 @@
         "emotions": ["통쾌함", "깨달음"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "각 인물의 깨달음", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "각 인물의 깨달음", "그 후 이야기"]
       }
     ],
     "sourceInfo": {

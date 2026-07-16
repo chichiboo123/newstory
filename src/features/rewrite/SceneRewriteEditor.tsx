@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Story } from '../../types/story';
 import type { RewrittenScene } from '../../types/project';
-import { FREYTAG_LABELS } from '../../types/story';
+import { STAGE_LABELS, getStageByOrder } from '../../types/story';
 import { STORY_GRAMMAR_PROMPTS, SENTENCE_STARTERS } from '../../data/rewrite-options';
 import { getProvider, getFallbackProvider } from '../../providers/ai';
 
@@ -96,7 +96,7 @@ export default function SceneRewriteEditor({ story, rewritten, onChange }: Props
       <div className="compare-grid">
         <div className="original-box">
           <h4>
-            <span className="freytag-badge">{FREYTAG_LABELS[scene.stage]}</span>원작 장면 {scene.order}. {scene.title}
+            <span className="stage-badge">{STAGE_LABELS[getStageByOrder(scene.order, story.scenes.length)]}</span>원작 장면 {scene.order}. {scene.title}
           </h4>
           <p>
             <strong>장소:</strong> {scene.location}

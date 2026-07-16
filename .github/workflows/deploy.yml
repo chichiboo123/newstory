@@ -57,9 +57,12 @@ jobs:
       - name: Build
         # configure-pages가 계산한 base_path(예: /newstory/)를 그대로 사용.
         # 저장소 이름이 바뀌어도 자동으로 맞춰집니다.
+        # GEMINI_API_KEY 시크릿이 있으면 AI 도우미가 켜지고, 없으면 규칙 기반으로 동작합니다.
         run: npm run build
         env:
           VITE_BASE: ${{ steps.pages.outputs.base_path }}
+          VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VITE_GEMINI_MODEL: ${{ vars.VITE_GEMINI_MODEL }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

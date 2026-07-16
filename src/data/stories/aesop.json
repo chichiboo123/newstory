@@ -62,8 +62,7 @@
         "emotions": ["얄미움", "차분함"],
         "conflict": "토끼가 거북이를 무시해요.",
         "nextConnection": "동물 친구들이 모여 경주 준비를 도와요.",
-        "editableElements": ["등장인물", "놀림 대신 다른 사건", "장소"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "놀림 대신 다른 사건", "장소"]
       },
       {
         "id": "s2",
@@ -75,8 +74,7 @@
         "emotions": ["설렘", "긴장"],
         "conflict": "둘의 속도 차이가 너무 커요.",
         "nextConnection": "한참 앞선 토끼가 여유를 부리기 시작해요.",
-        "editableElements": ["경주 규칙", "응원하는 인물", "출발 장소"],
-        "stage": "rising"
+        "editableElements": ["경주 규칙", "응원하는 인물", "출발 장소"]
       },
       {
         "id": "s3",
@@ -88,8 +86,7 @@
         "emotions": ["여유", "자만"],
         "conflict": "토끼가 경주 중이라는 것을 잊어버려요.",
         "nextConnection": "그 사이 거북이가 토끼 곁을 지나가요.",
-        "editableElements": ["토끼의 선택", "낮잠 대신 다른 행동", "일어나는 사건"],
-        "stage": "climax"
+        "editableElements": ["토끼의 선택", "낮잠 대신 다른 행동", "일어나는 사건"]
       },
       {
         "id": "s4",
@@ -101,8 +98,7 @@
         "emotions": ["끈기", "희망"],
         "conflict": "거북이의 다리가 아프고 지쳐요.",
         "nextConnection": "잠에서 깬 토끼가 깜짝 놀라 달려가요.",
-        "editableElements": ["거북이의 마음속 말", "도와주는 친구", "날씨"],
-        "stage": "falling"
+        "editableElements": ["거북이의 마음속 말", "도와주는 친구", "날씨"]
       },
       {
         "id": "s5",
@@ -114,8 +110,7 @@
         "emotions": ["기쁨", "후회"],
         "conflict": "토끼가 자신의 실수를 받아들여야 해요.",
         "nextConnection": "",
-        "editableElements": ["결말", "두 인물의 대화", "경주 이후의 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "두 인물의 대화", "경주 이후의 이야기"]
       }
     ],
     "sourceInfo": {
@@ -190,8 +185,7 @@
         "emotions": ["즐거움", "분주함"],
         "conflict": "두 친구의 여름을 보내는 방법이 달라요.",
         "nextConnection": "계절이 바뀌며 찬 바람이 불기 시작해요.",
-        "editableElements": ["등장인물", "계절", "두 인물의 대화"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "계절", "두 인물의 대화"]
       },
       {
         "id": "s2",
@@ -203,8 +197,7 @@
         "emotions": ["불안", "후회"],
         "conflict": "베짱이에게 모아 둔 먹이가 하나도 없어요.",
         "nextConnection": "눈이 내리고 베짱이는 개미네 집을 떠올려요.",
-        "editableElements": ["사건", "베짱이의 선택", "날씨"],
-        "stage": "rising"
+        "editableElements": ["사건", "베짱이의 선택", "날씨"]
       },
       {
         "id": "s3",
@@ -216,8 +209,7 @@
         "emotions": ["부끄러움", "망설임"],
         "conflict": "개미는 베짱이를 도와야 할지 고민해요.",
         "nextConnection": "베짱이가 자신의 여름 이야기를 들려줘요.",
-        "editableElements": ["대사", "개미의 선택", "해결 방법"],
-        "stage": "climax"
+        "editableElements": ["대사", "개미의 선택", "해결 방법"]
       },
       {
         "id": "s4",
@@ -229,8 +221,7 @@
         "emotions": ["솔직함", "생각에 잠김"],
         "conflict": "노래하는 일은 쓸모없는 일일까요?",
         "nextConnection": "개미에게 좋은 생각이 떠올라요.",
-        "editableElements": ["인물의 행동", "감정", "대화"],
-        "stage": "falling"
+        "editableElements": ["인물의 행동", "감정", "대화"]
       },
       {
         "id": "s5",
@@ -242,8 +233,7 @@
         "emotions": ["따뜻함", "고마움"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "약속의 내용", "다음 여름 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "약속의 내용", "다음 여름 이야기"]
       }
     ],
     "sourceInfo": {
@@ -332,8 +322,7 @@
         "emotions": ["지루함", "장난기"],
         "conflict": "소년의 심심함이 나쁜 장난으로 이어지려 해요.",
         "nextConnection": "소년이 마을을 향해 크게 소리쳐요.",
-        "editableElements": ["주인공", "장소", "심심함을 푸는 방법"],
-        "stage": "exposition"
+        "editableElements": ["주인공", "장소", "심심함을 푸는 방법"]
       },
       {
         "id": "s2",
@@ -345,8 +334,7 @@
         "emotions": ["재미", "화남"],
         "conflict": "소년의 거짓말이 사람들의 믿음을 깎아내려요.",
         "nextConnection": "소년은 장난을 한 번 더 반복해요.",
-        "editableElements": ["사건", "사람들의 반응", "대사"],
-        "stage": "rising"
+        "editableElements": ["사건", "사람들의 반응", "대사"]
       },
       {
         "id": "s3",
@@ -358,8 +346,7 @@
         "emotions": ["공포", "절박함"],
         "conflict": "아무도 소년의 말을 믿지 않아요.",
         "nextConnection": "소년은 포기하지 않고 마을로 달려가요.",
-        "editableElements": ["위기의 종류", "해결 방법", "믿어 주는 인물"],
-        "stage": "climax"
+        "editableElements": ["위기의 종류", "해결 방법", "믿어 주는 인물"]
       },
       {
         "id": "s4",
@@ -371,8 +358,7 @@
         "emotions": ["간절함", "망설임"],
         "conflict": "사람들은 또 속는 것이 아닐까 망설여요.",
         "nextConnection": "모두 함께 늑대를 쫓으러 가요.",
-        "editableElements": ["인물의 행동", "설득 방법", "대사"],
-        "stage": "falling"
+        "editableElements": ["인물의 행동", "설득 방법", "대사"]
       },
       {
         "id": "s5",
@@ -384,8 +370,7 @@
         "emotions": ["안도", "다짐"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "약속의 내용", "그 후의 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "약속의 내용", "그 후의 이야기"]
       }
     ],
     "sourceInfo": {
@@ -474,8 +459,7 @@
         "emotions": ["자존심", "승부욕"],
         "conflict": "누가 더 힘이 센지 정해야 해요.",
         "nextConnection": "북풍이 먼저 나서기로 해요.",
-        "editableElements": ["등장인물", "내기의 내용", "장소"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "내기의 내용", "장소"]
       },
       {
         "id": "s2",
@@ -487,8 +471,7 @@
         "emotions": ["온 힘을 다함", "추움"],
         "conflict": "바람이 셀수록 나그네는 외투를 놓지 않아요.",
         "nextConnection": "지친 북풍이 물러나고 해님의 차례가 와요.",
-        "editableElements": ["북풍의 작전", "나그네의 반응", "날씨"],
-        "stage": "rising"
+        "editableElements": ["북풍의 작전", "나그네의 반응", "날씨"]
       },
       {
         "id": "s3",
@@ -500,8 +483,7 @@
         "emotions": ["따뜻함", "편안함"],
         "conflict": "과연 나그네가 스스로 외투를 벗을까요?",
         "nextConnection": "나그네가 외투 단추를 풀기 시작해요.",
-        "editableElements": ["해님의 방법", "사건", "분위기"],
-        "stage": "climax"
+        "editableElements": ["해님의 방법", "사건", "분위기"]
       },
       {
         "id": "s4",
@@ -513,8 +495,7 @@
         "emotions": ["상쾌함", "만족"],
         "conflict": "",
         "nextConnection": "하늘에서 내기의 결과가 정해져요.",
-        "editableElements": ["나그네의 행동", "장소", "새로운 사건"],
-        "stage": "falling"
+        "editableElements": ["나그네의 행동", "장소", "새로운 사건"]
       },
       {
         "id": "s5",
@@ -526,8 +507,7 @@
         "emotions": ["깨달음", "화해"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "두 인물의 대화", "새로운 내기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "두 인물의 대화", "새로운 내기"]
       }
     ],
     "sourceInfo": {
@@ -602,8 +582,7 @@
         "emotions": ["정성", "아쉬움"],
         "conflict": "도시 쥐가 시골의 삶을 낮춰 봐요.",
         "nextConnection": "도시 쥐가 시골 쥐를 도시로 초대해요.",
-        "editableElements": ["등장인물", "장소", "차린 음식"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "장소", "차린 음식"]
       },
       {
         "id": "s2",
@@ -615,8 +594,7 @@
         "emotions": ["설렘", "놀라움"],
         "conflict": "낯선 도시가 시골 쥐에게는 신기하면서도 무서워요.",
         "nextConnection": "저택 식탁에 오른 두 쥐 앞에 맛있는 음식이 가득 펼쳐져요.",
-        "editableElements": ["가는 방법", "도시의 모습", "사건"],
-        "stage": "rising"
+        "editableElements": ["가는 방법", "도시의 모습", "사건"]
       },
       {
         "id": "s3",
@@ -628,8 +606,7 @@
         "emotions": ["긴장", "공포"],
         "conflict": "맛있는 음식이 눈앞에 있어도 마음 편히 먹을 수 없어요.",
         "nextConnection": "숨은 구멍 속에서 시골 쥐가 생각에 잠겨요.",
-        "editableElements": ["위험의 종류", "사건", "해결 방법"],
-        "stage": "climax"
+        "editableElements": ["위험의 종류", "사건", "해결 방법"]
       },
       {
         "id": "s4",
@@ -641,8 +618,7 @@
         "emotions": ["그리움", "솔직함"],
         "conflict": "친구의 초대를 거절해야 할지 고민돼요.",
         "nextConnection": "시골 쥐가 집으로 돌아가기로 해요.",
-        "editableElements": ["인물의 마음", "대화", "선택"],
-        "stage": "falling"
+        "editableElements": ["인물의 마음", "대화", "선택"]
       },
       {
         "id": "s5",
@@ -654,8 +630,7 @@
         "emotions": ["평화", "우정"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "우정을 이어가는 방법", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "우정을 이어가는 방법", "그 후 이야기"]
       }
     ],
     "sourceInfo": {
@@ -730,8 +705,7 @@
         "emotions": ["놀람", "두려움"],
         "conflict": "생쥐의 목숨이 사자의 손에 달렸어요.",
         "nextConnection": "생쥐가 떨리는 목소리로 약속을 해요.",
-        "editableElements": ["등장인물", "만나게 된 사건", "장소"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "만나게 된 사건", "장소"]
       },
       {
         "id": "s2",
@@ -743,8 +717,7 @@
         "emotions": ["간절함", "너그러움"],
         "conflict": "사자는 생쥐의 약속을 믿지 않아요.",
         "nextConnection": "며칠 뒤 초원에 사냥꾼이 나타나요.",
-        "editableElements": ["대사", "약속의 내용", "사자의 반응"],
-        "stage": "rising"
+        "editableElements": ["대사", "약속의 내용", "사자의 반응"]
       },
       {
         "id": "s3",
@@ -756,8 +729,7 @@
         "emotions": ["당황", "절망"],
         "conflict": "힘센 사자도 그물에서 빠져나올 수 없어요.",
         "nextConnection": "울음소리를 들은 생쥐가 달려와요.",
-        "editableElements": ["위기의 종류", "장소", "사건"],
-        "stage": "climax"
+        "editableElements": ["위기의 종류", "장소", "사건"]
       },
       {
         "id": "s4",
@@ -769,8 +741,7 @@
         "emotions": ["집중", "희망"],
         "conflict": "사냥꾼이 돌아오기 전에 그물을 끊어야 해요.",
         "nextConnection": "자유로워진 사자가 생쥐에게 고마움을 전해요.",
-        "editableElements": ["구하는 방법", "돕는 친구", "긴장되는 순간"],
-        "stage": "falling"
+        "editableElements": ["구하는 방법", "돕는 친구", "긴장되는 순간"]
       },
       {
         "id": "s5",
@@ -782,8 +753,7 @@
         "emotions": ["고마움", "우정"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "두 인물의 대화", "우정의 표현"],
-        "stage": "resolution"
+        "editableElements": ["결말", "두 인물의 대화", "우정의 표현"]
       }
     ],
     "sourceInfo": {
@@ -858,8 +828,7 @@
         "emotions": ["놀라움", "기쁨"],
         "conflict": "믿을 수 없는 일이 벌어졌어요.",
         "nextConnection": "다음 날도, 그다음 날도 황금알이 하나씩 나와요.",
-        "editableElements": ["주인공", "신기한 물건", "장소"],
-        "stage": "exposition"
+        "editableElements": ["주인공", "신기한 물건", "장소"]
       },
       {
         "id": "s2",
@@ -871,8 +840,7 @@
         "emotions": ["만족", "우쭐함"],
         "conflict": "농부의 마음속에서 더 갖고 싶은 욕심이 자라나요.",
         "nextConnection": "농부는 하루에 한 알로는 부족하다고 생각하기 시작해요.",
-        "editableElements": ["사건", "농부의 소비", "마을 사람들의 반응"],
-        "stage": "rising"
+        "editableElements": ["사건", "농부의 소비", "마을 사람들의 반응"]
       },
       {
         "id": "s3",
@@ -884,8 +852,7 @@
         "emotions": ["욕심", "망설임"],
         "conflict": "지금의 행복과 더 큰 욕심 사이에서 흔들려요.",
         "nextConnection": "그 순간 거위의 눈망울이 농부의 마음을 두드려요.",
-        "editableElements": ["농부의 선택", "말리는 인물", "긴장의 순간"],
-        "stage": "climax"
+        "editableElements": ["농부의 선택", "말리는 인물", "긴장의 순간"]
       },
       {
         "id": "s4",
@@ -897,8 +864,7 @@
         "emotions": ["후회", "안도"],
         "conflict": "농부가 자신의 욕심과 마주해요.",
         "nextConnection": "농부는 거위에게 진심으로 사과해요.",
-        "editableElements": ["깨닫는 계기", "인물의 행동", "감정"],
-        "stage": "falling"
+        "editableElements": ["깨닫는 계기", "인물의 행동", "감정"]
       },
       {
         "id": "s5",
@@ -910,8 +876,7 @@
         "emotions": ["감사", "평온"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "농부의 다짐", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "농부의 다짐", "그 후 이야기"]
       }
     ],
     "sourceInfo": {
@@ -986,8 +951,7 @@
         "emotions": ["기대", "서운함"],
         "conflict": "두루미가 접시의 음식을 먹을 수 없어요.",
         "nextConnection": "두루미가 집으로 돌아가며 어떤 생각을 떠올려요.",
-        "editableElements": ["등장인물", "대접한 음식", "그릇의 모양"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "대접한 음식", "그릇의 모양"]
       },
       {
         "id": "s2",
@@ -999,8 +963,7 @@
         "emotions": ["서운함", "결심"],
         "conflict": "화를 어떻게 표현해야 할지 고민이에요.",
         "nextConnection": "두루미가 여우를 자기 집으로 초대해요.",
-        "editableElements": ["두루미의 선택", "마음속 말", "해결 방법"],
-        "stage": "rising"
+        "editableElements": ["두루미의 선택", "마음속 말", "해결 방법"]
       },
       {
         "id": "s3",
@@ -1012,8 +975,7 @@
         "emotions": ["당황", "깨달음"],
         "conflict": "이번에는 여우가 먹을 수 없어요.",
         "nextConnection": "여우가 두루미네 집에서의 저녁을 떠올리며 생각에 잠겨요.",
-        "editableElements": ["그릇의 모양", "음식", "대사"],
-        "stage": "climax"
+        "editableElements": ["그릇의 모양", "음식", "대사"]
       },
       {
         "id": "s4",
@@ -1025,8 +987,7 @@
         "emotions": ["미안함", "용서"],
         "conflict": "먼저 사과하는 것은 용기가 필요해요.",
         "nextConnection": "두 친구가 새로운 저녁 식사를 약속해요.",
-        "editableElements": ["사과하는 방법", "대화", "감정"],
-        "stage": "falling"
+        "editableElements": ["사과하는 방법", "대화", "감정"]
       },
       {
         "id": "s5",
@@ -1038,8 +999,7 @@
         "emotions": ["즐거움", "따뜻함"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "식탁의 모습", "새로운 약속"],
-        "stage": "resolution"
+        "editableElements": ["결말", "식탁의 모습", "새로운 약속"]
       }
     ],
     "sourceInfo": {

@@ -90,8 +90,7 @@
         "emotions": ["슬픔", "희망"],
         "conflict": "모두 집에서 쓸모없다는 말을 들었어요.",
         "nextConnection": "해가 지고 네 친구는 잘 곳을 찾아 숲으로 들어가요.",
-        "editableElements": ["등장인물", "떠나는 이유", "목적지"],
-        "stage": "exposition"
+        "editableElements": ["등장인물", "떠나는 이유", "목적지"]
       },
       {
         "id": "s2",
@@ -103,8 +102,7 @@
         "emotions": ["배고픔", "긴장"],
         "conflict": "오두막 안에 무서운 도둑들이 있어요.",
         "nextConnection": "네 친구가 도둑을 쫓아낼 꾀를 냅니다.",
-        "editableElements": ["발견한 장소", "안에 있는 인물", "시간"],
-        "stage": "rising"
+        "editableElements": ["발견한 장소", "안에 있는 인물", "시간"]
       },
       {
         "id": "s3",
@@ -116,8 +114,7 @@
         "emotions": ["용기", "통쾌함"],
         "conflict": "무서움을 이기고 함께 소리쳐야 해요.",
         "nextConnection": "네 친구는 오두막에서 저녁을 먹고 잠이 들어요.",
-        "editableElements": ["작전의 방법", "합체 순서", "도둑들의 반응"],
-        "stage": "climax"
+        "editableElements": ["작전의 방법", "합체 순서", "도둑들의 반응"]
       },
       {
         "id": "s4",
@@ -129,8 +126,7 @@
         "emotions": ["긴장", "통쾌함"],
         "conflict": "도둑이 오두막을 되찾으려 해요.",
         "nextConnection": "도둑들은 멀리 떠나고 오두막은 네 친구의 집이 돼요.",
-        "editableElements": ["도둑의 작전", "각 동물의 활약", "사건"],
-        "stage": "falling"
+        "editableElements": ["도둑의 작전", "각 동물의 활약", "사건"]
       },
       {
         "id": "s5",
@@ -142,8 +138,7 @@
         "emotions": ["행복", "뿌듯함"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "집을 꾸미는 방법", "음악대의 공연"],
-        "stage": "resolution"
+        "editableElements": ["결말", "집을 꾸미는 방법", "음악대의 공연"]
       }
     ],
     "sourceInfo": {
@@ -232,8 +227,7 @@
         "emotions": ["불안", "다짐"],
         "conflict": "깊은 숲은 길을 잃기 쉬워요.",
         "nextConnection": "해가 지고 남매는 그만 길을 잃고 말아요.",
-        "editableElements": ["숲에 가는 이유", "길 표시 방법", "장소"],
-        "stage": "exposition"
+        "editableElements": ["숲에 가는 이유", "길 표시 방법", "장소"]
       },
       {
         "id": "s2",
@@ -245,8 +239,7 @@
         "emotions": ["놀라움", "허기"],
         "conflict": "달콤한 집에는 비밀이 숨어 있어요.",
         "nextConnection": "마녀의 정체가 드러나요.",
-        "editableElements": ["신기한 집의 재료", "유혹하는 방법", "등장인물"],
-        "stage": "rising"
+        "editableElements": ["신기한 집의 재료", "유혹하는 방법", "등장인물"]
       },
       {
         "id": "s3",
@@ -258,8 +251,7 @@
         "emotions": ["두려움", "침착함"],
         "conflict": "남매가 마녀에게 붙잡혔어요.",
         "nextConnection": "그레텔에게 기회가 찾아와요.",
-        "editableElements": ["갇힌 방법", "시간을 버는 꾀", "탈출 계획"],
-        "stage": "climax"
+        "editableElements": ["갇힌 방법", "시간을 버는 꾀", "탈출 계획"]
       },
       {
         "id": "s4",
@@ -271,8 +263,7 @@
         "emotions": ["용기", "통쾌함"],
         "conflict": "단 한 번의 기회를 놓치면 안 돼요.",
         "nextConnection": "남매는 마녀의 집에서 반짝이는 보물을 발견해요.",
-        "editableElements": ["해결 방법", "그레텔의 대사", "마녀의 최후"],
-        "stage": "falling"
+        "editableElements": ["해결 방법", "그레텔의 대사", "마녀의 최후"]
       },
       {
         "id": "s5",
@@ -284,8 +275,7 @@
         "emotions": ["기쁨", "안도"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["돌아가는 길의 모험", "결말", "가족의 약속"],
-        "stage": "resolution"
+        "editableElements": ["돌아가는 길의 모험", "결말", "가족의 약속"]
       }
     ],
     "sourceInfo": {
@@ -388,8 +378,7 @@
         "emotions": ["질투", "분노"],
         "conflict": "여왕은 자신이 최고가 아니라는 사실을 견딜 수 없어요.",
         "nextConnection": "여왕이 공주를 궁에서 내보낼 계획을 세워요.",
-        "editableElements": ["거울의 질문", "등장인물", "여왕의 반응"],
-        "stage": "exposition"
+        "editableElements": ["거울의 질문", "등장인물", "여왕의 반응"]
       },
       {
         "id": "s2",
@@ -401,8 +390,7 @@
         "emotions": ["무서움", "안도"],
         "conflict": "공주는 갈 곳이 없어요.",
         "nextConnection": "거울이 여왕에게 공주가 살아 있다고 알려 줘요.",
-        "editableElements": ["도와주는 인물", "숨는 장소", "약속"],
-        "stage": "rising"
+        "editableElements": ["도와주는 인물", "숨는 장소", "약속"]
       },
       {
         "id": "s3",
@@ -414,8 +402,7 @@
         "emotions": ["긴장", "슬픔"],
         "conflict": "공주가 낯선 사람의 선물을 의심하지 못했어요.",
         "nextConnection": "돌아온 난쟁이들이 잠든 공주를 발견해요.",
-        "editableElements": ["변장한 모습", "건네는 물건", "공주의 선택"],
-        "stage": "climax"
+        "editableElements": ["변장한 모습", "건네는 물건", "공주의 선택"]
       },
       {
         "id": "s4",
@@ -427,8 +414,7 @@
         "emotions": ["슬픔", "기쁨"],
         "conflict": "잠든 공주를 깨울 방법을 찾아야 해요.",
         "nextConnection": "여왕이 거울 앞에서 진실을 마주해요.",
-        "editableElements": ["깨어나는 방법", "돕는 인물", "사건"],
-        "stage": "falling"
+        "editableElements": ["깨어나는 방법", "돕는 인물", "사건"]
       },
       {
         "id": "s5",
@@ -440,8 +426,7 @@
         "emotions": ["깨달음", "평화"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "여왕의 변화", "공주의 새 생활"],
-        "stage": "resolution"
+        "editableElements": ["결말", "여왕의 변화", "공주의 새 생활"]
       }
     ],
     "sourceInfo": {
@@ -530,8 +515,7 @@
         "emotions": ["속상함", "슬픔"],
         "conflict": "우물이 너무 깊어 공을 꺼낼 수 없어요.",
         "nextConnection": "울음소리를 듣고 개구리가 나타나요.",
-        "editableElements": ["소중한 물건", "잃어버린 장소", "주인공"],
-        "stage": "exposition"
+        "editableElements": ["소중한 물건", "잃어버린 장소", "주인공"]
       },
       {
         "id": "s2",
@@ -543,8 +527,7 @@
         "emotions": ["기대", "얼떨떨함"],
         "conflict": "공주는 약속을 지킬 생각이 없어요.",
         "nextConnection": "공을 받은 공주가 개구리를 두고 궁으로 달아나요.",
-        "editableElements": ["부탁의 내용", "약속 조건", "대사"],
-        "stage": "rising"
+        "editableElements": ["부탁의 내용", "약속 조건", "대사"]
       },
       {
         "id": "s3",
@@ -556,8 +539,7 @@
         "emotions": ["곤란함", "부끄러움"],
         "conflict": "공주는 약속과 싫은 마음 사이에서 갈등해요.",
         "nextConnection": "공주가 마지못해 개구리를 식탁에 앉혀요.",
-        "editableElements": ["개구리의 등장 방법", "왕의 가르침", "공주의 마음"],
-        "stage": "climax"
+        "editableElements": ["개구리의 등장 방법", "왕의 가르침", "공주의 마음"]
       },
       {
         "id": "s4",
@@ -569,8 +551,7 @@
         "emotions": ["미안함", "놀라움"],
         "conflict": "공주의 마음이 겉모습을 넘어설 수 있을까요?",
         "nextConnection": "빛 속에서 개구리의 본모습이 나타나요.",
-        "editableElements": ["마법이 풀리는 조건", "함께 보낸 시간", "감정의 변화"],
-        "stage": "falling"
+        "editableElements": ["마법이 풀리는 조건", "함께 보낸 시간", "감정의 변화"]
       },
       {
         "id": "s5",
@@ -582,8 +563,7 @@
         "emotions": ["기쁨", "우정"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["본모습의 정체", "결말", "두 사람의 미래"],
-        "stage": "resolution"
+        "editableElements": ["본모습의 정체", "결말", "두 사람의 미래"]
       }
     ],
     "sourceInfo": {
@@ -672,8 +652,7 @@
         "emotions": ["걱정", "씩씩함"],
         "conflict": "엄마가 없는 동안 아기들끼리 집을 지켜야 해요.",
         "nextConnection": "숲에서 늑대가 이 이야기를 엿들어요.",
-        "editableElements": ["엄마의 당부 내용", "가족 구성", "집의 위치"],
-        "stage": "exposition"
+        "editableElements": ["엄마의 당부 내용", "가족 구성", "집의 위치"]
       },
       {
         "id": "s2",
@@ -685,8 +664,7 @@
         "emotions": ["긴장", "의심"],
         "conflict": "늑대가 점점 더 교묘하게 속이려 해요.",
         "nextConnection": "늑대가 발에 하얀 밀가루를 묻히고 다시 찾아와요.",
-        "editableElements": ["늑대의 속임수", "확인하는 방법", "대사"],
-        "stage": "rising"
+        "editableElements": ["늑대의 속임수", "확인하는 방법", "대사"]
       },
       {
         "id": "s3",
@@ -698,8 +676,7 @@
         "emotions": ["놀람", "두려움"],
         "conflict": "늑대가 집 안으로 들어왔어요.",
         "nextConnection": "돌아온 엄마 염소가 엉망이 된 집을 발견해요.",
-        "editableElements": ["숨는 장소", "위기의 전개", "막내의 행동"],
-        "stage": "climax"
+        "editableElements": ["숨는 장소", "위기의 전개", "막내의 행동"]
       },
       {
         "id": "s4",
@@ -711,8 +688,7 @@
         "emotions": ["슬픔", "결의"],
         "conflict": "형과 누나들이 늑대에게 잡혀갔어요.",
         "nextConnection": "냇가에서 배부른 늑대가 낮잠 자는 것을 발견해요.",
-        "editableElements": ["남은 인물", "구출 계획", "도와주는 친구"],
-        "stage": "falling"
+        "editableElements": ["남은 인물", "구출 계획", "도와주는 친구"]
       },
       {
         "id": "s5",
@@ -724,8 +700,7 @@
         "emotions": ["기쁨", "안도"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["구출 방법", "늑대의 최후", "가족의 새 약속"],
-        "stage": "resolution"
+        "editableElements": ["구출 방법", "늑대의 최후", "가족의 새 약속"]
       }
     ],
     "sourceInfo": {
@@ -828,8 +803,7 @@
         "emotions": ["설렘", "책임감"],
         "conflict": "숲길에는 어떤 일이 기다리고 있을까요?",
         "nextConnection": "숲 입구에서 늑대가 소녀를 발견해요.",
-        "editableElements": ["심부름의 내용", "주인공", "당부의 말"],
-        "stage": "exposition"
+        "editableElements": ["심부름의 내용", "주인공", "당부의 말"]
       },
       {
         "id": "s2",
@@ -841,8 +815,7 @@
         "emotions": ["즐거움", "불길함"],
         "conflict": "늑대의 달콤한 말에 소녀가 한눈을 팔았어요.",
         "nextConnection": "늑대가 할머니 집 문을 두드려요.",
-        "editableElements": ["늑대의 꾐", "소녀의 선택", "길의 모습"],
-        "stage": "rising"
+        "editableElements": ["늑대의 꾐", "소녀의 선택", "길의 모습"]
       },
       {
         "id": "s3",
@@ -854,8 +827,7 @@
         "emotions": ["의심", "공포"],
         "conflict": "할머니로 변장한 늑대와 한 방에 있어요.",
         "nextConnection": "소녀가 있는 힘껏 소리치며 도움을 요청해요.",
-        "editableElements": ["이상한 점들", "질문과 대답", "정체가 드러나는 순간"],
-        "stage": "climax"
+        "editableElements": ["이상한 점들", "질문과 대답", "정체가 드러나는 순간"]
       },
       {
         "id": "s4",
@@ -867,8 +839,7 @@
         "emotions": ["긴박함", "안도"],
         "conflict": "늑대를 쫓고 할머니를 찾아야 해요.",
         "nextConnection": "가족이 다시 모여 서로를 꼭 안아요.",
-        "editableElements": ["구출 방법", "돕는 인물", "늑대의 최후"],
-        "stage": "falling"
+        "editableElements": ["구출 방법", "돕는 인물", "늑대의 최후"]
       },
       {
         "id": "s5",
@@ -880,8 +851,7 @@
         "emotions": ["따뜻함", "다짐"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "다짐의 내용", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "다짐의 내용", "그 후 이야기"]
       }
     ],
     "sourceInfo": {

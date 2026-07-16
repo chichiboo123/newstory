@@ -2,6 +2,31 @@ import { useState } from 'react';
 import type { Story } from '../../types/story';
 import type { CharacterChange } from '../../types/project';
 import CharacterCard from '../../components/CharacterCard';
+import { HEXACO_FACTORS } from '../../data/personality-hexaco';
+
+/** HEXACO 성격 낱말 카드: 클릭하면 성격 칸에 낱말을 더해 줍니다. */
+function PersonalityWordPicker({ onPick }: { onPick: (word: string) => void }) {
+  return (
+    <details className="word-picker">
+      <summary>🎨 성격 낱말 카드에서 고르기</summary>
+      <p className="hint" style={{ marginTop: '0.5rem' }}>
+        성격 심리학의 여섯 가지 성격(HEXACO)으로 정리한 낱말이에요. 눌러서 골라 보세요.
+      </p>
+      {HEXACO_FACTORS.map((f) => (
+        <div key={f.key} style={{ marginTop: '0.6rem' }}>
+          <p style={{ margin: '0 0 0.25rem', fontWeight: 700, fontSize: 'var(--fs-detail)' }}>{f.childName}</p>
+          <div className="choice-row">
+            {[...f.words, ...f.contrastWords].map((w) => (
+              <button key={w} type="button" className="chip" onClick={() => onPick(w)}>
+                {w}
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+    </details>
+  );
+}
 
 interface Props {
   story: Story;
@@ -101,6 +126,17 @@ export default function CharacterChangesEditor({ story, changes, onChange }: Pro
                         value={getChange(c.id)[f.key]}
                         onChange={(e) => updateChange(c.id, { [f.key]: e.target.value })}
                       />
+                      {f.key === 'personality' && (
+                        <PersonalityWordPicker
+                          onPick={(word) => {
+                            const cur = getChange(c.id).personality.trim();
+                            const parts = cur ? cur.split(/,\s*/) : [];
+                            if (!parts.includes(word)) {
+                              updateChange(c.id, { personality: [...parts, word].join(', ') });
+                            }
+                          }}
+                        />
+                      )}
                     </div>
                   ))}
                 </div>

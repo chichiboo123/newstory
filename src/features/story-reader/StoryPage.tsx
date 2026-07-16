@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getStoryById } from '../../data/stories';
-import { FREYTAG_LABELS } from '../../types/story';
+import { STAGE_LABELS, getStageByOrder } from '../../types/story';
 import StepBar from '../../components/StepBar';
 import CharacterCard from '../../components/CharacterCard';
 import { CoverArt } from '../../components/StoryCard';
@@ -113,14 +113,14 @@ export default function StoryPage() {
       {tab === 'scenes' && (
         <section aria-label="장면 구조">
           <p className="notice">
-            장면마다 붙은 <strong>발단 → 전개 → 절정 → 하강 → 결말</strong> 표시는 이야기가 어떻게
-            산처럼 올라갔다 내려오는지 보여 줘요. (프라이타크의 이야기 산 모형)
+            장면마다 붙은 <strong>발단 → 전개 → 위기 → 절정 → 결말</strong> 표시는 이야기가 어떻게
+            흘러가는지 보여 줘요. (2022 개정 교육과정 국어과 지도서의 이야기 구성 단계)
           </p>
           <ol className="scene-list">
             {story.scenes.map((sc) => (
               <li key={sc.id} className="card scene-item">
-                <h3>
-                  <span className="freytag-badge">{FREYTAG_LABELS[sc.stage]}</span>
+                <h3 className="scene-title">
+                  <span className="stage-badge">{STAGE_LABELS[getStageByOrder(sc.order, story.scenes.length)]}</span>
                   {sc.order}. {sc.title}
                 </h3>
                 <p>

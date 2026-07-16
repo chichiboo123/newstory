@@ -90,8 +90,7 @@
         "emotions": ["기대", "속상함"],
         "conflict": "소 판 돈 대신 콩 다섯 알만 남았어요.",
         "nextConnection": "밤사이 창밖에서 신기한 일이 벌어져요.",
-        "editableElements": ["바꾼 물건", "노인의 정체", "어머니의 반응"],
-        "stage": "exposition"
+        "editableElements": ["바꾼 물건", "노인의 정체", "어머니의 반응"]
       },
       {
         "id": "s2",
@@ -103,8 +102,7 @@
         "emotions": ["놀라움", "설렘"],
         "conflict": "구름 위 세상은 위험할지도 몰라요.",
         "nextConnection": "잭이 거대한 성의 문을 두드려요.",
-        "editableElements": ["자라난 것", "구름 위 세상", "오르는 이유"],
-        "stage": "rising"
+        "editableElements": ["자라난 것", "구름 위 세상", "오르는 이유"]
       },
       {
         "id": "s3",
@@ -116,8 +114,7 @@
         "emotions": ["긴장", "두근거림"],
         "conflict": "들키면 큰일 나는 숨바꼭질이 시작돼요.",
         "nextConnection": "잭이 암탉과 하프가 아버지의 보물임을 알게 돼요.",
-        "editableElements": ["숨는 곳", "거인의 보물", "도와주는 인물"],
-        "stage": "climax"
+        "editableElements": ["숨는 곳", "거인의 보물", "도와주는 인물"]
       },
       {
         "id": "s4",
@@ -129,8 +126,7 @@
         "emotions": ["아찔함", "온 힘을 다함"],
         "conflict": "거인이 바짝 뒤쫓아 와요.",
         "nextConnection": "잭이 땅에 닿자마자 도끼를 찾아요.",
-        "editableElements": ["들키는 계기", "추격전", "가져오는 것"],
-        "stage": "falling"
+        "editableElements": ["들키는 계기", "추격전", "가져오는 것"]
       },
       {
         "id": "s5",
@@ -142,8 +138,7 @@
         "emotions": ["안도", "기쁨"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "거인의 최후", "보물의 쓰임"],
-        "stage": "resolution"
+        "editableElements": ["결말", "거인의 최후", "보물의 쓰임"]
       }
     ],
     "sourceInfo": {
@@ -232,8 +227,7 @@
         "emotions": ["기대", "들뜸"],
         "conflict": "신은 '정말 그것으로 좋겠느냐'고 되물어요.",
         "nextConnection": "다음 날 아침, 소원이 이루어져요.",
-        "editableElements": ["소원의 내용", "소원을 주는 존재", "주인공"],
-        "stage": "exposition"
+        "editableElements": ["소원의 내용", "소원을 주는 존재", "주인공"]
       },
       {
         "id": "s2",
@@ -245,8 +239,7 @@
         "emotions": ["환희", "흥분"],
         "conflict": "기쁨 속에 불안의 씨앗이 숨어 있어요.",
         "nextConnection": "배가 고파진 왕이 식탁에 앉아요.",
-        "editableElements": ["변하는 것들", "왕의 행동", "분위기"],
-        "stage": "rising"
+        "editableElements": ["변하는 것들", "왕의 행동", "분위기"]
       },
       {
         "id": "s3",
@@ -258,8 +251,7 @@
         "emotions": ["당황", "두려움"],
         "conflict": "황금 손 때문에 아무것도 먹을 수 없어요.",
         "nextConnection": "그때 공주가 아버지를 위로하러 달려와요.",
-        "editableElements": ["곤란해지는 상황", "장소", "왕의 마음"],
-        "stage": "climax"
+        "editableElements": ["곤란해지는 상황", "장소", "왕의 마음"]
       },
       {
         "id": "s4",
@@ -271,8 +263,7 @@
         "emotions": ["절망", "후회"],
         "conflict": "가장 사랑하는 사람을 잃었어요.",
         "nextConnection": "신이 해결 방법을 알려 줘요.",
-        "editableElements": ["잃게 되는 것", "후회의 말", "감정"],
-        "stage": "falling"
+        "editableElements": ["잃게 되는 것", "후회의 말", "감정"]
       },
       {
         "id": "s5",
@@ -284,8 +275,7 @@
         "emotions": ["안도", "감사"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["되돌리는 방법", "결말", "왕의 다짐"],
-        "stage": "resolution"
+        "editableElements": ["되돌리는 방법", "결말", "왕의 다짐"]
       }
     ],
     "sourceInfo": {
@@ -388,8 +378,7 @@
         "emotions": ["놀라움", "기쁨"],
         "conflict": "피노키오는 아직 세상을 몰라요.",
         "nextConnection": "할아버지가 외투를 팔아 교과서를 사 줘요.",
-        "editableElements": ["만들어지는 존재", "이름", "장소"],
-        "stage": "exposition"
+        "editableElements": ["만들어지는 존재", "이름", "장소"]
       },
       {
         "id": "s2",
@@ -401,8 +390,7 @@
         "emotions": ["들뜸", "후회"],
         "conflict": "달콤한 유혹이 피노키오를 자꾸 흔들어요.",
         "nextConnection": "요정이 피노키오를 발견하고 보살펴 줘요.",
-        "editableElements": ["유혹의 내용", "속임수", "잃는 것"],
-        "stage": "rising"
+        "editableElements": ["유혹의 내용", "속임수", "잃는 것"]
       },
       {
         "id": "s3",
@@ -414,8 +402,7 @@
         "emotions": ["당황", "부끄러움"],
         "conflict": "거짓말은 숨길 수 없이 드러나요.",
         "nextConnection": "피노키오는 착한 아이가 되기로 약속하지만, 또 한 번 유혹이 찾아와요.",
-        "editableElements": ["거짓말의 표시", "거짓말의 내용", "용서의 조건"],
-        "stage": "climax"
+        "editableElements": ["거짓말의 표시", "거짓말의 내용", "용서의 조건"]
       },
       {
         "id": "s4",
@@ -427,8 +414,7 @@
         "emotions": ["용기", "간절함"],
         "conflict": "고래 배 속에서 빠져나가야 해요.",
         "nextConnection": "피노키오가 할아버지를 업고 헤엄쳐요.",
-        "editableElements": ["위기의 장소", "구하러 가는 방법", "탈출 계획"],
-        "stage": "falling"
+        "editableElements": ["위기의 장소", "구하러 가는 방법", "탈출 계획"]
       },
       {
         "id": "s5",
@@ -440,8 +426,7 @@
         "emotions": ["감동", "행복"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "변화의 조건", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "변화의 조건", "그 후 이야기"]
       }
     ],
     "sourceInfo": {
@@ -558,8 +543,7 @@
         "emotions": ["놀라움", "얼떨떨함"],
         "conflict": "낯선 나라에서 집으로 돌아갈 방법을 찾아야 해요.",
         "nextConnection": "도로시가 노란 벽돌 길을 따라 걷기 시작해요.",
-        "editableElements": ["떨어진 나라", "받는 물건", "이동 방법"],
-        "stage": "exposition"
+        "editableElements": ["떨어진 나라", "받는 물건", "이동 방법"]
       },
       {
         "id": "s2",
@@ -571,8 +555,7 @@
         "emotions": ["반가움", "희망"],
         "conflict": "각자 자신에게 없는 것이 있다고 믿어요.",
         "nextConnection": "일행이 에메랄드 시에 도착해요.",
-        "editableElements": ["만나는 친구들", "각자의 소원", "길의 모험"],
-        "stage": "rising"
+        "editableElements": ["만나는 친구들", "각자의 소원", "길의 모험"]
       },
       {
         "id": "s3",
@@ -584,8 +567,7 @@
         "emotions": ["긴장", "결의"],
         "conflict": "무서운 마녀와 맞서야 해요.",
         "nextConnection": "서쪽 마녀가 일행을 방해하기 시작해요.",
-        "editableElements": ["마법사의 조건", "여행의 목적지", "일행의 각오"],
-        "stage": "climax"
+        "editableElements": ["마법사의 조건", "여행의 목적지", "일행의 각오"]
       },
       {
         "id": "s4",
@@ -597,8 +579,7 @@
         "emotions": ["아슬아슬함", "통쾌함"],
         "conflict": "각자 없다고 믿었던 것을 이미 쓰고 있어요.",
         "nextConnection": "마법사에게 돌아간 일행이 뜻밖의 진실을 알게 돼요.",
-        "editableElements": ["마녀를 이기는 방법", "각자의 활약", "구출 장면"],
-        "stage": "falling"
+        "editableElements": ["마녀를 이기는 방법", "각자의 활약", "구출 장면"]
       },
       {
         "id": "s5",
@@ -610,8 +591,7 @@
         "emotions": ["놀라움", "깨달음", "그리움"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["마법사의 정체", "집으로 가는 방법", "결말"],
-        "stage": "resolution"
+        "editableElements": ["마법사의 정체", "집으로 가는 방법", "결말"]
       }
     ],
     "sourceInfo": {

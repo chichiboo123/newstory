@@ -1,22 +1,49 @@
 /**
  * 동화 원작 데이터 타입.
  *
- * 장면 구조는 구스타프 프라이타크(Gustav Freytag)의 5단계 극 구성
- * (발단 → 상승 → 절정 → 하강 → 결말)을 따르고,
+ * 장면 구조는 2022 개정 교육과정 국어과 지도서(4학년)에 제시된
+ * 이야기의 구성 단계 '발단 → 전개 → 위기 → 절정 → 결말'을 따릅니다.
+ * (출처: 김대조·김민중(2013), 『생각을 키우는 시와 동화 쓰기』, 꿈과희망.)
+ * 각 동화는 5개의 장면으로 이루어져 장면 순서가 곧 구성 단계가 됩니다.
+ *
  * 인물 역할은 블라디미르 프로프(Vladimir Propp)의 등장인물 기능 이론을
  * 어린이 눈높이에 맞게 단순화하여 사용합니다.
  */
 
-/** 프라이타크 피라미드 5단계 */
-export type FreytagStage = 'exposition' | 'rising' | 'climax' | 'falling' | 'resolution';
+/** 이야기의 구성 단계 (2022 개정 교육과정 국어과 지도서 기반) */
+export type NarrativeStage = 'exposition' | 'development' | 'crisis' | 'climax' | 'denouement';
 
-export const FREYTAG_LABELS: Record<FreytagStage, string> = {
+export const STAGE_ORDER: NarrativeStage[] = [
+  'exposition',
+  'development',
+  'crisis',
+  'climax',
+  'denouement',
+];
+
+export const STAGE_LABELS: Record<NarrativeStage, string> = {
   exposition: '발단',
-  rising: '전개',
+  development: '전개',
+  crisis: '위기',
   climax: '절정',
-  falling: '하강',
-  resolution: '결말',
+  denouement: '결말',
 };
+
+/** 지도서에 제시된 각 단계 설명 (어린이용으로 다듬음) */
+export const STAGE_DESCRIPTIONS: Record<NarrativeStage, string> = {
+  exposition: '이야기가 시작돼요. 인물과 배경이 소개되고 사건의 실마리가 나타나요.',
+  development: '사건이 본격적으로 펼쳐지고 인물 사이에 갈등이 생겨요.',
+  crisis: '새로운 일이 벌어지고 갈등이 점점 커져서 절정으로 가는 계기가 돼요.',
+  climax: '갈등이 가장 커지고, 문제를 풀 실마리가 보이는 가장 중요한 순간이에요.',
+  denouement: '사건이 마무리되고 갈등이 풀리며 주인공의 이야기가 끝나요.',
+};
+
+/** 장면 순서(1부터)와 전체 장면 수로 구성 단계를 계산합니다. */
+export function getStageByOrder(order: number, total: number): NarrativeStage {
+  if (total <= 1) return STAGE_ORDER[0];
+  const idx = Math.round(((order - 1) / (total - 1)) * (STAGE_ORDER.length - 1));
+  return STAGE_ORDER[Math.min(Math.max(idx, 0), STAGE_ORDER.length - 1)];
+}
 
 /** 프로프의 행동 영역(7가지 인물 기능)을 어린이용으로 단순화한 역할 */
 export type ProppRole =
@@ -76,8 +103,6 @@ export interface Scene {
   nextConnection: string;
   /** 어린이가 바꿀 수 있는 요소 */
   editableElements: string[];
-  /** 프라이타크 피라미드 단계 */
-  stage: FreytagStage;
 }
 
 export interface SourceInfo {

@@ -30,14 +30,27 @@
   --color-link: #b8500f;
   --color-focus: #1a56db; /* KRDS 포커스: 명확한 파란 링 */
 
-  /* 타이포그래피 */
+  /* 타이포그래피 — KRDS 타입 스케일(일관된 위계) */
   --font-family: 'Pretendard GOV Variable', 'Pretendard GOV', 'Pretendard Variable', Pretendard,
     -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', sans-serif;
+  --fs-h1: 1.75rem; /* 28px */
+  --fs-h2: 1.375rem; /* 22px */
+  --fs-h3: 1.15rem; /* 18px — 카드 제목 등 */
   --fs-body: 1.0625rem; /* 17px — 어린이 가독성 */
-  --fs-small: 0.9375rem;
+  --fs-small: 0.9375rem; /* 15px — 라벨·보조 */
+  --fs-detail: 0.8125rem; /* 13px — 태그·설명 */
   --lh-body: 1.75;
+  --lh-heading: 1.4;
 
-  /* 간격 & 모서리 */
+  /* 간격 스케일 (KRDS: 4px 배수) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  /* 모서리 & 그림자 */
   --radius-card: 20px;
   --radius-btn: 14px;
   --shadow-card: 0 4px 16px rgba(94, 62, 26, 0.08);
@@ -70,8 +83,25 @@ body {
 }
 
 h1, h2, h3, h4 {
-  line-height: 1.4;
+  line-height: var(--lh-heading);
   margin: 0 0 0.5em;
+}
+
+/* KRDS 타입 스케일 — 화면 전체에서 제목 크기를 일관되게 유지 */
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h3);
 }
 
 p {
@@ -485,7 +515,7 @@ button {
 }
 
 .story-card-title {
-  font-size: 1.1rem;
+  font-size: var(--fs-h3);
   font-weight: 800;
   margin: 0;
 }
@@ -496,6 +526,14 @@ button {
   margin: 0;
 }
 
+/* 카드 안의 동작 버튼 묶음 — 항상 같은 정렬·간격으로 배치 */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -504,7 +542,7 @@ button {
 }
 
 .tag {
-  font-size: 0.8rem;
+  font-size: var(--fs-detail);
   font-weight: 700;
   background: var(--color-secondary-soft);
   color: var(--color-secondary-strong);
@@ -591,7 +629,7 @@ button {
 }
 
 .role-badge {
-  font-size: 0.8rem;
+  font-size: var(--fs-detail);
   background: var(--color-accent-soft);
   color: var(--color-accent-strong);
   border-radius: 999px;
@@ -614,16 +652,36 @@ button {
   margin: 0;
 }
 
-/* 프라이타크 구조 표시 */
-.freytag-badge {
+/* 이야기 구성 단계(발단·전개·위기·절정·결말) 표시 */
+.stage-badge {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: var(--fs-detail);
   font-weight: 800;
   border-radius: 8px;
-  padding: 0.1rem 0.55rem;
+  padding: 0.15rem 0.55rem;
   margin-right: 0.5rem;
   background: var(--color-primary-soft);
   color: var(--color-primary-dark);
+  vertical-align: middle;
+}
+
+.scene-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/* HEXACO 성격 낱말 카드 */
+.word-picker {
+  margin-top: var(--space-2);
+}
+
+.word-picker > summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--color-accent-strong);
+  font-size: var(--fs-small);
 }
 
 .scene-list {

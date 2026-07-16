@@ -90,8 +90,7 @@
         "emotions": ["고단함", "꿋꿋함"],
         "conflict": "가족들이 신데렐라를 부당하게 대해요.",
         "nextConnection": "왕궁에서 무도회 초대장이 도착해요.",
-        "editableElements": ["주인공의 처지", "가족 구성", "장소"],
-        "stage": "exposition"
+        "editableElements": ["주인공의 처지", "가족 구성", "장소"]
       },
       {
         "id": "s2",
@@ -103,8 +102,7 @@
         "emotions": ["설렘", "서러움"],
         "conflict": "신데렐라만 무도회에 갈 수 없어요.",
         "nextConnection": "그때 반짝이는 빛과 함께 요정 대모가 나타나요.",
-        "editableElements": ["초대장의 내용", "가지 못하는 이유", "사건"],
-        "stage": "rising"
+        "editableElements": ["초대장의 내용", "가지 못하는 이유", "사건"]
       },
       {
         "id": "s3",
@@ -116,8 +114,7 @@
         "emotions": ["놀라움", "기쁨"],
         "conflict": "마법에는 자정이라는 시간제한이 있어요.",
         "nextConnection": "신데렐라가 무도회장에 들어서요.",
-        "editableElements": ["마법의 재료", "변신의 내용", "마법의 규칙"],
-        "stage": "climax"
+        "editableElements": ["마법의 재료", "변신의 내용", "마법의 규칙"]
       },
       {
         "id": "s4",
@@ -129,8 +126,7 @@
         "emotions": ["행복", "다급함"],
         "conflict": "자정 전에 왕궁을 떠나야 해요.",
         "nextConnection": "왕자가 유리 구두의 주인을 찾아 나서요.",
-        "editableElements": ["남기고 간 물건", "시간의 규칙", "떠나는 장면"],
-        "stage": "falling"
+        "editableElements": ["남기고 간 물건", "시간의 규칙", "떠나는 장면"]
       },
       {
         "id": "s5",
@@ -142,8 +138,7 @@
         "emotions": ["기쁨", "용서"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["증표의 물건", "결말", "용서의 방법"],
-        "stage": "resolution"
+        "editableElements": ["증표의 물건", "결말", "용서의 방법"]
       }
     ],
     "sourceInfo": {
@@ -232,8 +227,7 @@
         "emotions": ["실망", "호기심"],
         "conflict": "막내에게는 살아갈 방법이 막막해요.",
         "nextConnection": "장화를 신은 고양이가 첫 번째 작전을 시작해요.",
-        "editableElements": ["물려받는 것", "주인공", "고양이의 부탁"],
-        "stage": "exposition"
+        "editableElements": ["물려받는 것", "주인공", "고양이의 부탁"]
       },
       {
         "id": "s2",
@@ -245,8 +239,7 @@
         "emotions": ["능청스러움", "궁금증"],
         "conflict": "카라바 후작은 사실 지어낸 이름이에요.",
         "nextConnection": "왕이 강가로 나들이를 간다는 소식이 들려요.",
-        "editableElements": ["선물의 내용", "지어낸 이름", "작전 방법"],
-        "stage": "rising"
+        "editableElements": ["선물의 내용", "지어낸 이름", "작전 방법"]
       },
       {
         "id": "s3",
@@ -258,8 +251,7 @@
         "emotions": ["긴장", "재치"],
         "conflict": "거짓말이 들통나면 큰일이에요.",
         "nextConnection": "고양이가 마차보다 앞서 달려가 들판을 준비해요.",
-        "editableElements": ["소동의 내용", "왕의 반응", "주인의 마음"],
-        "stage": "climax"
+        "editableElements": ["소동의 내용", "왕의 반응", "주인의 마음"]
       },
       {
         "id": "s4",
@@ -271,8 +263,7 @@
         "emotions": ["아슬아슬함", "통쾌함"],
         "conflict": "힘으로는 이길 수 없는 상대를 꾀로 이겨야 해요.",
         "nextConnection": "성이 조용해지고 왕의 마차가 도착해요.",
-        "editableElements": ["괴물의 능력", "이기는 꾀", "대결 장소"],
-        "stage": "falling"
+        "editableElements": ["괴물의 능력", "이기는 꾀", "대결 장소"]
       },
       {
         "id": "s5",
@@ -284,8 +275,7 @@
         "emotions": ["기쁨", "뿌듯함"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["결말", "고양이의 보상", "그 후 이야기"],
-        "stage": "resolution"
+        "editableElements": ["결말", "고양이의 보상", "그 후 이야기"]
       }
     ],
     "sourceInfo": {
@@ -388,8 +378,7 @@
         "emotions": ["기쁨", "공포", "안도"],
         "conflict": "저주를 없앨 수는 없고 바꿀 수만 있어요.",
         "nextConnection": "왕이 온 나라의 물레를 없애라고 명령해요.",
-        "editableElements": ["축복의 내용", "저주의 내용", "초대받지 못한 인물"],
-        "stage": "exposition"
+        "editableElements": ["축복의 내용", "저주의 내용", "초대받지 못한 인물"]
       },
       {
         "id": "s2",
@@ -401,8 +390,7 @@
         "emotions": ["호기심", "아득함"],
         "conflict": "그토록 피하려던 저주가 일어나고 말아요.",
         "nextConnection": "막내 요정이 성 전체에 잠의 마법을 걸어요.",
-        "editableElements": ["금지된 물건", "저주가 이루어지는 과정", "장소"],
-        "stage": "rising"
+        "editableElements": ["금지된 물건", "저주가 이루어지는 과정", "장소"]
       },
       {
         "id": "s3",
@@ -414,8 +402,7 @@
         "emotions": ["고요함", "신비로움"],
         "conflict": "성은 백 년 동안 세상과 단절돼요.",
         "nextConnection": "백 년의 세월이 흐르고 성은 전설이 돼요.",
-        "editableElements": ["함께 잠든 이들", "성을 지키는 방법", "시간의 길이"],
-        "stage": "climax"
+        "editableElements": ["함께 잠든 이들", "성을 지키는 방법", "시간의 길이"]
       },
       {
         "id": "s4",
@@ -427,8 +414,7 @@
         "emotions": ["긴장", "경이로움"],
         "conflict": "아무도 성공하지 못한 길을 가야 해요.",
         "nextConnection": "왕자가 잠든 공주를 발견해요.",
-        "editableElements": ["도전하는 인물", "길이 열리는 이유", "성안의 풍경"],
-        "stage": "falling"
+        "editableElements": ["도전하는 인물", "길이 열리는 이유", "성안의 풍경"]
       },
       {
         "id": "s5",
@@ -440,8 +426,7 @@
         "emotions": ["기쁨", "활기"],
         "conflict": "",
         "nextConnection": "",
-        "editableElements": ["깨어나는 방법", "결말", "새 시대의 모습"],
-        "stage": "resolution"
+        "editableElements": ["깨어나는 방법", "결말", "새 시대의 모습"]
       }
     ],
     "sourceInfo": {

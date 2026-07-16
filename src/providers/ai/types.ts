@@ -1,9 +1,9 @@
 /**
  * AI 제공자 추상화.
  *
- * GitHub Pages는 정적 호스팅이라 비밀 API 키를 안전하게 숨길 수 없으므로,
  * 기본값은 API 없이 동작하는 LocalRuleProvider입니다.
- * 안전한 외부 프록시(교사/기관 운영)가 있을 때만 RemoteAIProvider를 사용합니다.
+ * 빌드 시 GEMINI_API_KEY가 주입되면 GeminiProvider가 활성화됩니다.
+ * (정적 호스팅 특성상 키 노출 위험이 있으므로 전용 키·리퍼러 제한·사용량 상한 필수. README 참고)
  */
 
 export interface IdeaRequest {

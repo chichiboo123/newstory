@@ -82,7 +82,7 @@ export default function MyStoriesPage() {
                   마지막 수정: {new Date(p.updatedAt).toLocaleDateString('ko-KR')}
                   {p.creatorNickname && ` · 글: ${p.creatorNickname}`}
                 </p>
-                <div className="choice-row" style={{ marginTop: '0.6rem' }}>
+                <div className="card-actions">
                   <Link className="btn btn-primary btn-sm" to={`/project/${p.id}`}>
                     이어서 쓰기
                   </Link>
