@@ -1,0 +1,747 @@
+/* ─────────────────────────────────────────────
+   「안녕, 동화」 디자인 토큰 & 전역 스타일
+   콘셉트: 세계의 동화를 만나는 따뜻한 마법 도서관
+   폰트: Pretendard GOV (index.html에서 로드)
+   ───────────────────────────────────────────── */
+
+:root {
+  /* 색상 토큰 */
+  --color-bg: #fdf8f0;
+  --color-surface: #ffffff;
+  --color-surface-warm: #fff6e9;
+  --color-primary: #e8752a;
+  --color-primary-dark: #c95d18;
+  --color-primary-soft: #ffe3cc;
+  --color-secondary: #4a7c59;
+  --color-secondary-soft: #ddefe2;
+  --color-accent: #7d5ba6;
+  --color-accent-soft: #ece3f6;
+  --color-text: #3d3229;
+  --color-text-sub: #6f6257;
+  --color-border: #e8ddd0;
+  --color-danger: #c0392b;
+  --color-focus: #1a73e8;
+
+  /* 타이포그래피 */
+  --font-family: 'Pretendard GOV Variable', 'Pretendard GOV', 'Pretendard Variable', Pretendard,
+    -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', sans-serif;
+  --fs-body: 1.0625rem; /* 17px — 어린이 가독성 */
+  --fs-small: 0.9375rem;
+  --lh-body: 1.75;
+
+  /* 간격 & 모서리 */
+  --radius-card: 20px;
+  --radius-btn: 14px;
+  --shadow-card: 0 4px 16px rgba(94, 62, 26, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(94, 62, 26, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  word-break: keep-all;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 0.75em;
+}
+
+a {
+  color: var(--color-primary-dark);
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+/* 접근성: 키보드 포커스 표시 */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 접근성: 화면 낭독기 전용 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ── 레이아웃 ───────────────────────────── */
+
+.app-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.app-header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.app-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.app-nav a {
+  text-decoration: none;
+  color: var(--color-text-sub);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-nav a.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 4rem;
+}
+
+.app-footer {
+  background: var(--color-surface-warm);
+  border-top: 1px solid var(--color-border);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--color-text-sub);
+  font-size: var(--fs-small);
+}
+
+/* ── 진행 단계 표시 (StepBar) ─────────────── */
+
+.stepbar {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.stepbar li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-sub);
+}
+
+.stepbar li .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+
+.stepbar li.current {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.stepbar li.current .step-num {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.stepbar li.done {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.stepbar li.done .step-num {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+/* ── 카드 공통 ─────────────────────────── */
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
+
+/* ── 버튼 ─────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 48px;
+  padding: 0.6rem 1.3rem;
+  border-radius: var(--radius-btn);
+  border: 2px solid transparent;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-ghost {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn-sm {
+  min-height: 40px;
+  padding: 0.35rem 0.9rem;
+  font-size: var(--fs-small);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ── 서가(도서관) ─────────────────────── */
+
+.library-hero {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+}
+
+.library-hero h1 {
+  font-size: 1.7rem;
+  color: var(--color-primary-dark);
+}
+
+.library-hero p {
+  color: var(--color-text-sub);
+}
+
+.library-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1 1 220px;
+  min-height: 48px;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-btn);
+  border: 2px solid var(--color-border);
+  font-size: inherit;
+  font-family: inherit;
+  background: var(--color-surface);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.filter-label {
+  font-weight: 700;
+  font-size: var(--fs-small);
+  color: var(--color-text-sub);
+  min-width: 3.6rem;
+}
+
+.chip {
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-sub);
+  border-radius: 999px;
+  padding: 0.25rem 0.85rem;
+  min-height: 40px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.story-cover {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+}
+
+.story-card-body {
+  padding: 0.9rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.story-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.story-card-meta {
+  font-size: var(--fs-small);
+  color: var(--color-text-sub);
+  margin: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+}
+
+.tag.tag-age {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+/* ── 동화 상세 ─────────────────────────── */
+
+.story-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.story-header .story-cover {
+  width: 150px;
+  min-width: 150px;
+  border-radius: var(--radius-card);
+}
+
+.detail-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 1.25rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-tabs button {
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-btn);
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  font-weight: 700;
+  color: var(--color-text-sub);
+}
+
+.detail-tabs button[aria-selected='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.info-item {
+  background: var(--color-surface-warm);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+}
+
+.info-item dt {
+  font-weight: 800;
+  font-size: var(--fs-small);
+  color: var(--color-primary-dark);
+}
+
+.info-item dd {
+  margin: 0.2rem 0 0;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.character-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.role-badge {
+  font-size: 0.8rem;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-weight: 700;
+}
+
+.character-card dl {
+  margin: 0;
+  font-size: var(--fs-small);
+}
+
+.character-card dt {
+  font-weight: 800;
+  color: var(--color-text-sub);
+  margin-top: 0.5rem;
+}
+
+.character-card dd {
+  margin: 0;
+}
+
+/* 프라이타크 구조 표시 */
+.freytag-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 0.1rem 0.55rem;
+  margin-right: 0.5rem;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.scene-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scene-item {
+  border-left: 5px solid var(--color-primary-soft);
+}
+
+/* ── 편집기 공통 ───────────────────────── */
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.field .hint {
+  font-size: var(--fs-small);
+  color: var(--color-text-sub);
+  margin: 0 0 0.35rem;
+}
+
+.field input[type='text'],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-btn);
+  border: 2px solid var(--color-border);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.6;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.idea-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.idea-card {
+  text-align: left;
+  border: 2px dashed var(--color-accent);
+  background: var(--color-accent-soft);
+  border-radius: 14px;
+  padding: 0.7rem 0.9rem;
+  color: var(--color-text);
+}
+
+.idea-card strong {
+  display: block;
+  color: var(--color-accent);
+}
+
+.idea-card span {
+  font-size: var(--fs-small);
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.original-box {
+  background: var(--color-surface-warm);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+}
+
+.original-box h4 {
+  color: var(--color-text-sub);
+}
+
+.save-status {
+  font-size: var(--fs-small);
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.notice {
+  background: var(--color-secondary-soft);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  font-size: var(--fs-small);
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.notice.warn {
+  background: #fdecea;
+  color: var(--color-danger);
+}
+
+/* ── 완성 동화책 미리 보기 ─────────────── */
+
+.book-preview {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.book-cover-page {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.book-cover-page h1 {
+  font-size: 2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.book-page {
+  padding: 1.75rem 2rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.book-page h2 {
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+}
+
+.book-page-body {
+  white-space: pre-wrap;
+}
+
+/* ── 인쇄(PDF 저장) 레이아웃 ───────────── */
+
+@media print {
+  .app-header,
+  .app-footer,
+  .stepbar,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .app-main {
+    padding: 0;
+    max-width: none;
+  }
+
+  .book-preview {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: none;
+  }
+
+  .book-page {
+    page-break-inside: avoid;
+  }
+}
+
+/* ── 움직임 줄이기 설정 존중 ───────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
